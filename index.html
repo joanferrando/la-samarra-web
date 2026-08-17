@@ -1,1 +1,568 @@
+<!DOCTYPE html>
+<html lang="ca">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>La Samarra</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         MENÚ
+    =========================================== -->
+
+    <header class="site-header">
+
+        <div class="header-container">
+
+            <a href="#inici" class="logo">
+                <img src="img/logo.png" alt="La Samarra">
+            </a>
+
+
+            <nav class="main-nav">
+
+                <a href="#inici">Inici</a>
+
+                <a href="#concerts">Concerts</a>
+
+                <a href="#musica">La nostra música</a>
+
+                <a href="#grup">El grup</a>
+
+                <a href="#videoclips">Videoclips</a>
+
+                <a href="#contacte">Contacte</a>
+
+                <a href="#dossier">Dossier</a>
+
+            </nav>
+
+
+            <div class="socials">
+
+                <a href="#" aria-label="Instagram">
+                    Instagram
+                </a>
+
+                <a href="#" aria-label="YouTube">
+                    YouTube
+                </a>
+
+                <a href="#" aria-label="Spotify">
+                    Spotify
+                </a>
+
+            </div>
+
+
+            <button
+                class="menu-toggle"
+                type="button"
+                aria-label="Obrir menú">
+
+                ☰
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        =========================================== -->
+
+        <section id="inici" class="hero-section">
+
+            <img
+                src="img/Hero.jpg"
+                alt="La Samarra"
+                class="hero-image">
+
+        </section>
+
+
+
+        <!-- ==========================================
+             PRESENTACIÓ
+        =========================================== -->
+
+        <section id="grup" class="intro-section">
+
+            <div class="intro-container">
+
+
+                <div class="intro-text">
+
+                    <p class="section-label">
+                        LA SAMARRA
+                    </p>
+
+                    <h1>
+                        Nadales fermes,<br>
+                        per Nadal, nadalegal.
+                    </h1>
+
+                    <p>
+                        Aquí anirà el text de presentació
+                        de La Samarra.
+                    </p>
+
+                </div>
+
+
+                <div class="intro-photo">
+
+                    <img
+                        src="img/foto1.jpg"
+                        alt="La Samarra">
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CONCERTS
+        =========================================== -->
+
+        <section id="concerts" class="concerts-section">
+
+            <div class="section-container">
+
+
+                <div class="concerts-top">
+
+
+                    <div class="concerts-heading">
+
+                        <div class="concert-polaroid">
+
+                            <img
+                                src="img/foto2.jpg"
+                                alt="La Samarra en directe">
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="section-label">
+                                AQUEST NADAL
+                            </p>
+
+                            <h2>
+                                Concerts
+                            </h2>
+
+                        </div>
+
+                    </div>
+
+
+                    <a
+                        href="concerts.html"
+                        class="all-concerts-btn">
+
+                        Veure tota la gira
+
+                    </a>
+
+
+                </div>
+
+
+                <div id="concerts-list">
+
+                    <!--
+                        Els concerts es carregaran
+                        posteriorment amb concerts.js
+                    -->
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             LA NOSTRA MÚSICA
+        =========================================== -->
+
+        <section id="musica" class="music-section">
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        ESCOLTA'NS
+                    </p>
+
+                    <h2>
+                        La nostra música
+                    </h2>
+
+                </div>
+
+
+                <div class="music-grid">
+
+
+                    <article class="album-card">
+
+                        <img
+                            src="img/portadaEP.jpg"
+                            alt="Nadales Fermes Vol. I">
+
+                        <h3>
+                            Nadales Fermes Vol. I
+                        </h3>
+
+                        <p>
+                            2025
+                        </p>
+
+
+                        <div class="album-links">
+
+                            <a href="#">
+                                Escolta
+                            </a>
+
+                            <a href="#">
+                                Descarrega
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             VIDEOCLIPS
+        =========================================== -->
+
+        <section id="videoclips" class="videos-section">
+
+            <div class="section-container">
+
+
+                <div class="section-heading">
+
+                    <p class="section-label">
+                        VÍDEO
+                    </p>
+
+                    <h2>
+                        Videoclips
+                    </h2>
+
+                </div>
+
+
+                <div class="videos-grid">
+
+
+                    <a
+                        href="#"
+                        class="video-card"
+                        target="_blank">
+
+                        <div class="video-image">
+
+                            <!--
+                                Aquí anirà la miniatura
+                            -->
+
+                        </div>
+
+                        <h3>
+                            Videoclip
+                        </h3>
+
+                    </a>
+
+
+                    <a
+                        href="#"
+                        class="video-card"
+                        target="_blank">
+
+                        <div class="video-image">
+
+                            <!--
+                                Aquí anirà la miniatura
+                            -->
+
+                        </div>
+
+                        <h3>
+                            Videoclip
+                        </h3>
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             CONTACTE
+        =========================================== -->
+
+        <section id="contacte" class="contact-section">
+
+            <div class="contact-container">
+
+
+                <div class="contact-photo">
+
+                    <img
+                        src="img/foto1.jpg"
+                        alt="La Samarra">
+
+                </div>
+
+
+                <div class="contact-content">
+
+                    <p class="section-label">
+                        CONTACTE
+                    </p>
+
+                    <h2>
+                        Contacta'ns
+                    </h2>
+
+
+                    <div class="contact-block">
+
+                        <h3>
+                            Contractació
+                        </h3>
+
+                        <p>
+                            <span>✉</span>
+                            <a href="mailto:">
+                                Correu
+                            </a>
+                        </p>
+
+                        <p>
+                            <span>☎</span>
+                            <a href="tel:">
+                                Telèfon
+                            </a>
+                        </p>
+
+                    </div>
+
+
+                    <div class="contact-block">
+
+                        <h3>
+                            Escriu-nos
+                        </h3>
+
+                        <p>
+                            <span>✉</span>
+                            <a href="mailto:">
+                                Correu
+                            </a>
+                        </p>
+
+
+                        <p>
+
+                            <span>◎</span>
+
+                            <a
+                                href="#"
+                                target="_blank">
+
+                                Instagram
+
+                            </a>
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             DOSSIER TÈCNIC
+        =========================================== -->
+
+        <section id="dossier" class="dossier-section">
+
+            <div class="dossier-container">
+
+
+                <h2>
+                    Dossier tècnic
+                </h2>
+
+
+                <div class="dossier-links">
+
+                    <a href="#">
+                        📁 Fotografies
+                    </a>
+
+                    <a href="#">
+                        📁 Logo
+                    </a>
+
+                    <a href="#">
+                        📁 Dossier de premsa
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="footer-container">
+
+
+            <div class="footer-brand">
+
+                <img
+                    src="img/logo.png"
+                    alt="La Samarra">
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <p>
+                    La Samarra
+                </p>
+
+                <a href="mailto:">
+                    Correu
+                </a>
+
+            </div>
+
+
+            <nav class="footer-nav">
+
+                <a href="#inici">Inici</a>
+
+                <a href="#concerts">Concerts</a>
+
+                <a href="#musica">La nostra música</a>
+
+                <a href="#grup">El grup</a>
+
+                <a href="#videoclips">Videoclips</a>
+
+                <a href="#contacte">Contacte</a>
+
+                <a href="#dossier">Dossier</a>
+
+            </nav>
+
+
+            <div class="footer-socials">
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    YouTube
+                </a>
+
+                <a href="#">
+                    Spotify
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            © 2026 La Samarra · Tots els drets reservats.
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="js/main.js"></script>
+
+    <script src="js/concerts.js"></script>
+
+
+</body>
+
+</html>
