@@ -1,1 +1,1155 @@
+/* =========================================================
+   LA SAMARRA
+   ESTIL GENERAL
+========================================================= */
 
+:root {
+    --granat: #74151b;
+    --granat-fosc: #4d0e13;
+    --granat-clar: #8b242b;
+
+    --paper: #e8e3d5;
+    --paper-clar: #f3efe5;
+    --crema: #f5f0e4;
+
+    --negre: #211e1c;
+
+    --amplada: 1200px;
+
+    --ombra:
+        0 8px 25px rgba(0, 0, 0, .12);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+        url("../img/FONS.jpg") center top / 700px auto repeat;
+
+    color: var(--negre);
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   TIPOGRAFIA
+========================================================= */
+
+h1,
+h2,
+h3 {
+    font-family:
+        'Bebas Neue',
+        sans-serif;
+
+    font-weight: 400;
+}
+
+.section-label {
+    color: var(--granat);
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .72rem;
+    font-weight: 700;
+
+    letter-spacing: .16em;
+
+    text-transform: uppercase;
+
+    margin-bottom: 8px;
+}
+
+
+/* =========================================================
+   CONTENIDOR GENERAL
+========================================================= */
+
+.section-container {
+    width: min(var(--amplada), 90%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   MENÚ
+========================================================= */
+
+.site-header {
+    position: fixed;
+
+    top: 20px;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+}
+
+.header-container {
+    width: min(
+        1200px,
+        calc(100% - 48px)
+    );
+
+    min-height: 78px;
+
+    margin: auto;
+
+    padding: 8px 22px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    background: var(--granat);
+
+    border-radius: 50px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .18);
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+
+    width: 82px;
+    height: 62px;
+
+    object-fit: contain;
+}
+
+
+/* NAVEGACIÓ */
+
+.main-nav {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 28px;
+
+    flex: 1;
+}
+
+.main-nav a {
+    color: var(--crema);
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .78rem;
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    letter-spacing: .015em;
+
+    transition: opacity .2s ease;
+}
+
+.main-nav a:hover {
+    opacity: .65;
+}
+
+
+/* XARXES */
+
+.socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+.socials a {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: var(--crema);
+
+    color: var(--granat);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .55rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+.socials a:hover {
+    transform: translateY(-2px);
+
+    background: white;
+}
+
+
+/* BOTÓ MÒBIL */
+
+.menu-toggle {
+    display: none;
+
+    border: 0;
+
+    background: transparent;
+
+    color: var(--crema);
+
+    font-size: 1.8rem;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+    padding-top: 105px;
+}
+
+.hero-image {
+    display: block;
+
+    width: 100%;
+
+    height: calc(100vh - 105px);
+    min-height: 580px;
+
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   PRESENTACIÓ
+========================================================= */
+
+.intro-section {
+    padding: 85px 0;
+}
+
+.intro-container {
+    width: min(var(--amplada), 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+.intro-text h1 {
+    color: var(--granat);
+
+    font-size:
+        clamp(3rem, 5vw, 4.8rem);
+
+    line-height: .88;
+
+    margin-bottom: 24px;
+}
+
+.intro-text > p:last-child {
+    max-width: 650px;
+
+    font-size: 1.35rem;
+
+    line-height: 1.45;
+}
+
+.intro-photo {
+    display: flex;
+
+    justify-content: center;
+}
+
+.intro-photo img {
+    display: block;
+
+    width: 100%;
+    max-width: 440px;
+
+    border-radius: 5px;
+
+    box-shadow: var(--ombra);
+
+    transform: rotate(2deg);
+}
+
+
+/* =========================================================
+   CONCERTS
+========================================================= */
+
+.concerts-section {
+    background: var(--granat);
+
+    color: white;
+
+    padding: 65px 0;
+}
+
+.concerts-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.concerts-heading {
+    display: flex;
+
+    align-items: center;
+
+    gap: 24px;
+}
+
+.concerts-heading h2 {
+    font-size:
+        clamp(3.2rem, 5vw, 4.7rem);
+
+    line-height: .8;
+}
+
+.concerts-heading .section-label {
+    color: white;
+
+    opacity: .75;
+}
+
+
+/* FOTO PETITA */
+
+.concert-polaroid {
+    width: 150px;
+
+    padding: 6px;
+
+    background: var(--crema);
+
+    box-shadow:
+        0 8px 18px rgba(0, 0, 0, .22);
+
+    transform: rotate(-3deg);
+}
+
+.concert-polaroid img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1.35 / 1;
+
+    object-fit: cover;
+}
+
+
+/* BOTÓ */
+
+.all-concerts-btn {
+    color: white;
+
+    border:
+        1px solid rgba(255, 255, 255, .55);
+
+    padding: 13px 22px;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .72rem;
+
+    text-transform: uppercase;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.all-concerts-btn:hover {
+    background: white;
+
+    color: var(--granat);
+}
+
+
+/* =========================================================
+   CONCERT INDIVIDUAL
+========================================================= */
+
+.concert-item {
+    display: grid;
+
+    grid-template-columns:
+        120px 1fr auto;
+
+    gap: 25px;
+
+    align-items: start;
+
+    padding: 20px 0;
+
+    border-top:
+        1px solid rgba(255, 255, 255, .25);
+}
+
+.concert-date {
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: .9;
+}
+
+.concert-date .day {
+    font-family:
+        'Bebas Neue',
+        sans-serif;
+
+    font-size: 3.4rem;
+}
+
+.concert-date .month {
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .62rem;
+
+    letter-spacing: .12em;
+
+    text-transform: uppercase;
+}
+
+.concert-info h3 {
+    font-family:
+        'Bebas Neue',
+        sans-serif;
+
+    font-size: 1.8rem;
+
+    line-height: 1;
+}
+
+.concert-info p {
+    font-size: 1rem;
+
+    margin-top: 2px;
+}
+
+.concert-info span {
+    opacity: .7;
+
+    font-size: .9rem;
+}
+
+.concert-ticket {
+    display: flex;
+
+    align-items: center;
+}
+
+.concert-ticket a {
+    color: white;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .7rem;
+
+    text-transform: uppercase;
+
+    border-bottom:
+        1px solid white;
+}
+
+
+/* =========================================================
+   LA NOSTRA MÚSICA
+========================================================= */
+
+.music-section {
+    padding: 85px 0;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    color: var(--granat);
+
+    font-size:
+        clamp(3.2rem, 5vw, 4.7rem);
+
+    line-height: .82;
+}
+
+.music-grid {
+    display: flex;
+
+    justify-content: center;
+}
+
+.album-card {
+    width: min(350px, 80%);
+
+    text-align: center;
+}
+
+.album-card > img {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    box-shadow: var(--ombra);
+}
+
+.album-card h3 {
+    margin-top: 18px;
+
+    color: var(--granat);
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size: 1.65rem;
+
+    font-weight: 700;
+}
+
+.album-card > p {
+    font-size: 1rem;
+}
+
+.album-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.album-links a {
+    padding: 10px 18px;
+
+    background: var(--granat);
+
+    color: white;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .68rem;
+
+    text-transform: uppercase;
+
+    transition:
+        background .2s ease;
+}
+
+.album-links a:hover {
+    background: var(--granat-fosc);
+}
+
+
+/* =========================================================
+   VIDEOCLIPS
+========================================================= */
+
+.videos-section {
+    background: var(--paper-clar);
+
+    padding: 75px 0;
+}
+
+.videos-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+.video-card {
+    display: block;
+}
+
+.video-image {
+    aspect-ratio: 16 / 9;
+
+    background: var(--granat);
+
+    border-radius: 8px;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.video-card:hover .video-image {
+    transform: translateY(-3px);
+
+    box-shadow: var(--ombra);
+}
+
+.video-card h3 {
+    color: var(--granat);
+
+    margin-top: 10px;
+
+    font-family:
+        'Cormorant Garamond',
+        Georgia,
+        serif;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   CONTACTE
+========================================================= */
+
+.contact-section {
+    padding: 85px 0;
+}
+
+.contact-container {
+    width: min(var(--amplada), 90%);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        .9fr 1.1fr;
+
+    gap: 75px;
+
+    align-items: center;
+}
+
+.contact-photo img {
+    display: block;
+
+    width: 100%;
+
+    max-height: 480px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    box-shadow: var(--ombra);
+}
+
+.contact-content h2 {
+    color: var(--granat);
+
+    font-size:
+        clamp(3.2rem, 5vw, 4.7rem);
+
+    line-height: .82;
+
+    margin-bottom: 35px;
+}
+
+.contact-block {
+    margin-bottom: 24px;
+}
+
+.contact-block h3 {
+    color: var(--granat);
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .72rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+    margin-bottom: 7px;
+}
+
+.contact-block p {
+    font-size: 1.15rem;
+
+    margin: 4px 0;
+}
+
+.contact-block a {
+    border-bottom:
+        1px solid var(--granat);
+}
+
+.contact-block span {
+    display: inline-block;
+
+    width: 25px;
+
+    color: var(--granat);
+}
+
+
+/* =========================================================
+   DOSSIER
+========================================================= */
+
+.dossier-section {
+    border-top:
+        1px solid rgba(116, 21, 27, .25);
+
+    padding: 32px 0;
+}
+
+.dossier-container {
+    width: min(var(--amplada), 90%);
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.dossier-container h2 {
+    color: var(--granat);
+
+    font-size: 2.4rem;
+}
+
+.dossier-links {
+    display: flex;
+
+    align-items: center;
+
+    gap: 28px;
+}
+
+.dossier-links a {
+    color: var(--granat);
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .68rem;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.site-footer {
+    background: var(--granat-fosc);
+
+    color: var(--crema);
+}
+
+.footer-container {
+    width: min(var(--amplada), 90%);
+
+    margin: auto;
+
+    padding: 50px 0;
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr 1fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+.footer-brand img {
+    width: 95px;
+
+    height: 95px;
+
+    object-fit: contain;
+}
+
+.footer-contact p {
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .7rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: .1em;
+
+    margin-bottom: 7px;
+}
+
+.footer-contact a {
+    font-size: 1rem;
+}
+
+.footer-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.footer-nav a {
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .68rem;
+
+    text-transform: uppercase;
+
+    opacity: .8;
+
+    transition: opacity .2s ease;
+}
+
+.footer-nav a:hover {
+    opacity: 1;
+}
+
+.footer-socials {
+    display: flex;
+
+    gap: 8px;
+}
+
+.footer-socials a {
+    width: 36px;
+    height: 36px;
+
+    border:
+        1px solid rgba(255, 255, 255, .4);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .55rem;
+
+    text-transform: uppercase;
+}
+
+.footer-bottom {
+    background: #a35a3b;
+
+    text-align: center;
+
+    padding: 8px;
+
+    font-family:
+        'Inter',
+        sans-serif;
+
+    font-size: .62rem;
+}
+
+
+/* =========================================================
+   MÒBIL
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        top: 10px;
+    }
+
+    .header-container {
+        width:
+            calc(100% - 24px);
+
+        min-height: 64px;
+
+        padding:
+            5px 16px;
+    }
+
+    .logo img {
+        width: 65px;
+        height: 52px;
+    }
+
+    .main-nav,
+    .socials {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+
+    /* HERO */
+
+    .hero-section {
+        padding-top: 84px;
+    }
+
+    .hero-image {
+        height: 520px;
+
+        min-height: 520px;
+    }
+
+
+    /* PRESENTACIÓ */
+
+    .intro-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+    .intro-photo {
+        order: -1;
+    }
+
+
+    /* CONCERTS */
+
+    .concerts-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .concert-item {
+        grid-template-columns:
+            70px 1fr;
+
+        gap: 18px;
+    }
+
+    .concert-ticket {
+        grid-column: 2;
+
+        justify-content: flex-start;
+    }
+
+
+    /* VIDEO */
+
+    .videos-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CONTACTE */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+    }
+
+
+    /* DOSSIER */
+
+    .dossier-container {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .dossier-links {
+        flex-wrap: wrap;
+    }
+
+
+    /* FOOTER */
+
+    .footer-container {
+        grid-template-columns:
+            1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   MÒBIL PETIT
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .intro-section,
+    .music-section,
+    .contact-section {
+        padding:
+            60px 0;
+    }
+
+    .concerts-section {
+        padding:
+            50px 0;
+    }
+
+    .videos-section {
+        padding:
+            60px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 28px;
+    }
+
+    .concerts-heading {
+        gap: 17px;
+    }
+
+    .concert-polaroid {
+        width: 105px;
+    }
+
+    .concert-item {
+        grid-template-columns:
+            60px 1fr;
+
+        padding:
+            17px 0;
+    }
+
+    .concert-date .day {
+        font-size: 2.8rem;
+    }
+
+    .concert-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .album-card {
+        width: 75%;
+    }
+
+    .album-links {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .album-links a {
+        text-align: center;
+    }
+
+    .dossier-links {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding:
+            40px 0;
+    }
+}
