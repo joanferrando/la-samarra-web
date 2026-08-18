@@ -1410,3 +1410,238 @@ h3 {
             40px 0;
     }
 }
+
+
+/* =========================================================
+   NEU SUTIL
+========================================================= */
+
+.snow-layer {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+}
+
+
+/* Cada floc */
+
+.snow-layer span {
+
+    position: absolute;
+
+    top: -15px;
+
+    width: 4px;
+    height: 4px;
+
+    background: rgba(255,255,255,.65);
+
+    border-radius: 50%;
+
+    filter: blur(.3px);
+
+    animation:
+        snowfall linear infinite;
+
+}
+
+
+/* Posicions i ritmes diferents */
+
+.snow-layer span:nth-child(1) {
+    left: 4%;
+    animation-duration: 14s;
+    animation-delay: -3s;
+}
+
+.snow-layer span:nth-child(2) {
+    left: 9%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 18s;
+    animation-delay: -10s;
+}
+
+.snow-layer span:nth-child(3) {
+    left: 15%;
+    animation-duration: 12s;
+    animation-delay: -6s;
+}
+
+.snow-layer span:nth-child(4) {
+    left: 21%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 20s;
+    animation-delay: -15s;
+}
+
+.snow-layer span:nth-child(5) {
+    left: 28%;
+    animation-duration: 16s;
+    animation-delay: -4s;
+}
+
+.snow-layer span:nth-child(6) {
+    left: 34%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 22s;
+    animation-delay: -12s;
+}
+
+.snow-layer span:nth-child(7) {
+    left: 41%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 15s;
+    animation-delay: -8s;
+}
+
+.snow-layer span:nth-child(8) {
+    left: 48%;
+    animation-duration: 19s;
+    animation-delay: -2s;
+}
+
+.snow-layer span:nth-child(9) {
+    left: 55%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 13s;
+    animation-delay: -9s;
+}
+
+.snow-layer span:nth-child(10) {
+    left: 61%;
+    animation-duration: 21s;
+    animation-delay: -14s;
+}
+
+.snow-layer span:nth-child(11) {
+    left: 67%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 17s;
+    animation-delay: -5s;
+}
+
+.snow-layer span:nth-child(12) {
+    left: 73%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 23s;
+    animation-delay: -17s;
+}
+
+.snow-layer span:nth-child(13) {
+    left: 79%;
+    animation-duration: 15s;
+    animation-delay: -7s;
+}
+
+.snow-layer span:nth-child(14) {
+    left: 84%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 19s;
+    animation-delay: -11s;
+}
+
+.snow-layer span:nth-child(15) {
+    left: 89%;
+    animation-duration: 14s;
+    animation-delay: -4s;
+}
+
+.snow-layer span:nth-child(16) {
+    left: 94%;
+    width: 5px;
+    height: 5px;
+    animation-duration: 22s;
+    animation-delay: -16s;
+}
+
+.snow-layer span:nth-child(17) {
+    left: 12%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 25s;
+    animation-delay: -20s;
+}
+
+.snow-layer span:nth-child(18) {
+    left: 38%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 20s;
+    animation-delay: -13s;
+}
+
+.snow-layer span:nth-child(19) {
+    left: 63%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 24s;
+    animation-delay: -18s;
+}
+
+.snow-layer span:nth-child(20) {
+    left: 96%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 18s;
+    animation-delay: -9s;
+}
+
+
+@keyframes snowfall {
+
+    0% {
+
+        transform:
+            translate3d(0, -20px, 0);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: .55;
+
+    }
+
+    50% {
+
+        transform:
+            translate3d(25px, 50vh, 0);
+
+        opacity: .45;
+
+    }
+
+    90% {
+
+        opacity: .25;
+
+    }
+
+    100% {
+
+        transform:
+            translate3d(-20px, 110vh, 0);
+
+        opacity: 0;
+
+    }
+
+}
