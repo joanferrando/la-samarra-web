@@ -1,83 +1,111 @@
+/* =========================================================
+   MENÚ MÒBIL
+========================================================= */
+
 const menuToggle = document.querySelector('.menu-toggle');
 const mainNav = document.querySelector('.main-nav');
 
-const navLinks = document.querySelectorAll('.main-nav a');
+
+if (menuToggle && mainNav) {
+
+    const navLinks =
+        document.querySelectorAll('.main-nav a');
 
 
-menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', () => {
 
-    const isOpen =
-        mainNav.classList.toggle('active');
+        const isOpen =
+            mainNav.classList.toggle('active');
 
-    menuToggle.setAttribute(
-        'aria-expanded',
-        isOpen
-    );
-
-
-    if (isOpen) {
-
-        menuToggle.innerHTML =
-            '<i class="fa-solid fa-xmark"></i>';
-
-    } else {
-
-        menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
-
-    }
-
-});
-
-
-navLinks.forEach(link => {
-
-    link.addEventListener('click', () => {
-
-        mainNav.classList.remove('active');
 
         menuToggle.setAttribute(
             'aria-expanded',
-            'false'
+            isOpen
         );
 
-        menuToggle.innerHTML =
-            '<i class="fa-solid fa-bars"></i>';
+
+        if (isOpen) {
+
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-xmark"></i>';
+
+        } else {
+
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+
+        }
 
     });
 
-});
+
+    navLinks.forEach(link => {
+
+        link.addEventListener('click', () => {
+
+            mainNav.classList.remove('active');
+
+            menuToggle.setAttribute(
+                'aria-expanded',
+                'false'
+            );
+
+            menuToggle.innerHTML =
+                '<i class="fa-solid fa-bars"></i>';
+
+        });
+
+    });
+
+}
+
 
 
 /* =========================================================
    REPRODUCTOR DE MÚSICA
 ========================================================= */
 
-const music = document.getElementById('background-music');
+const music =
+    document.getElementById('background-music');
 
-const playButton = document.getElementById('play-button');
+const playButton =
+    document.getElementById('play-button');
 
-const muteButton = document.getElementById('mute-button');
+const muteButton =
+    document.getElementById('mute-button');
 
 
 if (music && playButton && muteButton) {
 
 
-    /* PLAY / PAUSE */
+    /* -----------------------------------------
+       PLAY / PAUSE
+    ----------------------------------------- */
 
-    playButton.addEventListener('click', () => {
+    playButton.addEventListener('click', async () => {
 
         if (music.paused) {
 
-            music.play();
+            try {
 
-            playButton.innerHTML =
-                '<i class="fa-solid fa-pause"></i>';
+                await music.play();
 
-            playButton.setAttribute(
-                'aria-label',
-                'Pausar música'
-            );
+                playButton.innerHTML =
+                    '<i class="fa-solid fa-pause"></i>';
+
+                playButton.setAttribute(
+                    'aria-label',
+                    'Pausar música'
+                );
+
+            } catch (error) {
+
+                console.error(
+                    'No s\'ha pogut reproduir l\'àudio:',
+                    error
+                );
+
+            }
 
         } else {
 
@@ -96,7 +124,9 @@ if (music && playButton && muteButton) {
     });
 
 
-    /* MUTE / DESMUTE */
+    /* -----------------------------------------
+       MUTE / DESMUTE
+    ----------------------------------------- */
 
     muteButton.addEventListener('click', () => {
 
@@ -129,7 +159,9 @@ if (music && playButton && muteButton) {
     });
 
 
-    /* Quan acaba la cançó */
+    /* -----------------------------------------
+       QUAN ACABA LA CANÇÓ
+    ----------------------------------------- */
 
     music.addEventListener('ended', () => {
 
