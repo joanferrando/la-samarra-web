@@ -1645,3 +1645,123 @@ h3 {
     }
 
 }
+
+.snow-layer span:nth-child(21) {
+    left: 7%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 17s;
+    animation-delay: -8s;
+}
+
+.snow-layer span:nth-child(22) {
+    left: 18%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 23s;
+    animation-delay: -15s;
+}
+
+.snow-layer span:nth-child(23) {
+    left: 25%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 19s;
+    animation-delay: -5s;
+}
+
+.snow-layer span:nth-child(24) {
+    left: 31%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 26s;
+    animation-delay: -20s;
+}
+
+.snow-layer span:nth-child(25) {
+    left: 45%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 16s;
+    animation-delay: -9s;
+}
+
+.snow-layer span:nth-child(26) {
+    left: 52%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 21s;
+    animation-delay: -16s;
+}
+
+.snow-layer span:nth-child(27) {
+    left: 58%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 18s;
+    animation-delay: -3s;
+}
+
+.snow-layer span:nth-child(28) {
+    left: 65%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 24s;
+    animation-delay: -13s;
+}
+
+.snow-layer span:nth-child(29) {
+    left: 70%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 20s;
+    animation-delay: -7s;
+}
+
+.snow-layer span:nth-child(30) {
+    left: 76%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 15s;
+    animation-delay: -11s;
+}
+
+.snow-layer span:nth-child(31) {
+    left: 82%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 25s;
+    animation-delay: -18s;
+}
+
+.snow-layer span:nth-child(32) {
+    left: 87%;
+    width: 4px;
+    height: 4px;
+    animation-duration: 18s;
+    animation-delay: -6s;
+}
+
+.snow-layer span:nth-child(33) {
+    left: 92%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 22s;
+    animation-delay: -14s;
+}
+
+.snow-layer span:nth-child(34) {
+    left: 97%;
+    width: 2px;
+    height: 2px;
+    animation-duration: 27s;
+    animation-delay: -21s;
+}
+
+.snow-layer span:nth-child(35) {
+    left: 42%;
+    width: 3px;
+    height: 3px;
+    animation-duration: 17s;
+    animation-delay: -12s;
+}
