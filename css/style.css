@@ -1726,42 +1726,137 @@ h3 {
     animation-delay: -11s;
 }
 
-.snow-layer span:nth-child(31) {
-    left: 82%;
-    width: 2px;
-    height: 2px;
-    animation-duration: 25s;
-    animation-delay: -18s;
+
+/* =========================================================
+   REPRODUCTOR DE MÚSICA
+========================================================= */
+
+.music-player {
+
+    position: fixed;
+
+    left: 18px;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    z-index: 950;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 7px;
+
+    background:
+        var(--granat);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.18);
+
 }
 
-.snow-layer span:nth-child(32) {
-    left: 87%;
-    width: 4px;
-    height: 4px;
-    animation-duration: 18s;
-    animation-delay: -6s;
+
+/* BOTONS */
+
+.player-button {
+
+    border: none;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color:
+        var(--granat);
+
+    background:
+        var(--crema);
+
+    border-radius: 50%;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+
 }
 
-.snow-layer span:nth-child(33) {
-    left: 92%;
-    width: 3px;
-    height: 3px;
-    animation-duration: 22s;
-    animation-delay: -14s;
+
+/* PLAY */
+
+.player-play {
+
+    width: 42px;
+
+    height: 42px;
+
+    font-size: .9rem;
+
 }
 
-.snow-layer span:nth-child(34) {
-    left: 97%;
-    width: 2px;
-    height: 2px;
-    animation-duration: 27s;
-    animation-delay: -21s;
+
+/* MUTE */
+
+.player-mute {
+
+    width: 30px;
+
+    height: 30px;
+
+    font-size: .68rem;
+
 }
 
-.snow-layer span:nth-child(35) {
-    left: 42%;
-    width: 3px;
-    height: 3px;
-    animation-duration: 17s;
-    animation-delay: -12s;
+
+.player-button:hover {
+
+    transform:
+        scale(1.08);
+
+    background:
+        white;
+
+}
+
+
+/* MÒBIL */
+
+@media (max-width: 600px) {
+
+    .music-player {
+
+        left: 10px;
+
+        padding: 5px;
+
+    }
+
+    .player-play {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+    .player-mute {
+
+        width: 27px;
+
+        height: 27px;
+
+    }
+
 }
