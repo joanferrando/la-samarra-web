@@ -166,7 +166,7 @@ h3 {
        i permetem que la imatge sobresurti.
     */
 
-    width: 175px;
+    width: 165px;
 
     height: 100%;
 
@@ -179,7 +179,7 @@ h3 {
 
     display: block;
 
-    width: 175px;
+    width: 165px;
 
     height: auto;
 
@@ -1149,7 +1149,7 @@ h3 {
 
     .logo {
 
-        width: 145px;
+        width: 132px;
 
         height: 100%;
 
@@ -1160,7 +1160,7 @@ h3 {
 
     .logo img {
 
-        width: 145px;
+        width: 132px;
 
         max-width: none;
 
