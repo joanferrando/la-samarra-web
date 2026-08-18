@@ -198,7 +198,7 @@ h3 {
         invert(1);
 
     transform:
-        rotate(-8deg);
+        rotate(-4deg);
 
     transform-origin:
         center;
@@ -212,7 +212,7 @@ h3 {
 .logo:hover img {
 
     transform:
-        rotate(-8deg)
+        rotate(-4deg)
         translateY(-2px);
 
 }
