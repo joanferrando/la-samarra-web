@@ -1013,7 +1013,7 @@ h3 {
 
 
 /* =========================================================
-   CONTINGUT PRINCIPAL DEL FOOTER
+   CONTINGUT PRINCIPAL
 ========================================================= */
 
 .footer-container {
@@ -1027,13 +1027,23 @@ h3 {
     display: grid;
 
     grid-template-columns:
-        1.35fr
+        1.45fr
         1fr
-        auto;
+        .85fr;
 
     align-items: center;
 
-    gap: 35px;
+    gap: 25px;
+
+    /*
+       Espai lateral extra perquè els botons
+       flotants no tapin el contingut
+    */
+
+    padding-left: 55px;
+    padding-right: 55px;
+
+    box-sizing: border-box;
 
 }
 
@@ -1053,14 +1063,9 @@ h3 {
 }
 
 
-/*
-   El contenidor té una alçada controlada
-   perquè no comptem tot l'aire del PNG.
-*/
+/* LOGO */
 
 .footer-logo {
-
-    position: relative;
 
     display: flex;
 
@@ -1078,12 +1083,6 @@ h3 {
 
 }
 
-
-/*
-   El logo continua sent gran,
-   però el retallem visualment per eliminar
-   l'espai transparent del PNG.
-*/
 
 .footer-logo img {
 
@@ -1128,6 +1127,7 @@ h3 {
         opacity .25s ease;
 
 }
+
 
 .footer-email:hover {
 
@@ -1181,8 +1181,6 @@ h3 {
 }
 
 
-/* SUBRATLLAT */
-
 .footer-nav a::after {
 
     content: "";
@@ -1222,7 +1220,16 @@ h3 {
 
     align-items: center;
 
+    justify-content: flex-start;
+
     gap: 8px;
+
+    /*
+       Les xarxes queden una mica més cap a
+       l'esquerra respecte de la versió anterior
+    */
+
+    transform: translateX(-18px);
 
 }
 
@@ -1298,6 +1305,8 @@ h3 {
 
     padding: 6px 12px;
 
+    box-sizing: border-box;
+
     background: var(--taronja);
 
     color: white;
@@ -1318,7 +1327,7 @@ h3 {
 
 
 /* =========================================================
-   FOOTER — MÒBIL
+   MÒBIL
 ========================================================= */
 
 @media (max-width: 900px) {
@@ -1332,6 +1341,9 @@ h3 {
         grid-template-columns: 1fr 1fr;
 
         gap: 20px;
+
+        padding-left: 0;
+        padding-right: 0;
 
     }
 
@@ -1355,6 +1367,13 @@ h3 {
     .footer-logo img {
 
         width: 155px;
+
+    }
+
+
+    .footer-socials {
+
+        transform: none;
 
     }
 
@@ -1425,6 +1444,8 @@ h3 {
     .footer-socials {
 
         margin-top: 0;
+
+        transform: none;
 
     }
 
