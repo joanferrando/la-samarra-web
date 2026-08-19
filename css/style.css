@@ -1118,6 +1118,8 @@ h3 {
 
     padding: 42px 0 48px;
 
+    /* Mateix fons blanquinós que els Videolyrics */
+
     background: rgba(255, 255, 255, .42);
 
 }
@@ -1236,6 +1238,11 @@ h3 {
 }
 
 
+/*
+   La imatge queda un 25% més petita
+   que ocupant tota la columna.
+*/
+
 .group-image img {
 
     display: block;
@@ -1252,7 +1259,7 @@ h3 {
 
 
 /* =========================================================
-   ENLLAÇ INSTAGRAM
+   INSTAGRAM
 ========================================================= */
 
 .group-instagram {
@@ -1305,6 +1312,9 @@ h3 {
     .group-section {
 
         padding: 34px 0 38px;
+
+        background:
+            rgba(255, 255, 255, .42);
 
     }
 
