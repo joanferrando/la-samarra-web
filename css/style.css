@@ -855,6 +855,242 @@ h3 {
 }
 
 /* =========================================================
+   MENÚ MÒBIL — RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    /* CONTENIDOR DEL MENÚ */
+
+    .header-container {
+
+        width: calc(100% - 28px);
+
+        height: 70px;
+
+        padding: 3px 14px;
+
+        gap: 0;
+
+    }
+
+
+    /* LOGO */
+
+    .logo {
+
+        width: 150px;
+
+        height: 100%;
+
+        margin-left: -5px;
+
+    }
+
+
+    .logo img {
+
+        width: 150px;
+
+    }
+
+
+    /* BOTÓ DE LES TRES BARRES */
+
+    .menu-toggle {
+
+        display: flex;
+
+        flex-shrink: 0;
+
+        width: 42px;
+
+        height: 42px;
+
+        margin-left: auto;
+
+        position: relative;
+
+        z-index: 10002;
+
+    }
+
+
+    /* XARXES: S'AMAGUEN AL MÒBIL */
+
+    .socials {
+
+        display: none;
+
+    }
+
+
+    /* =====================================================
+       MENÚ DESPLEGABLE
+    ===================================================== */
+
+    .main-nav {
+
+        display: none;
+
+        position: absolute;
+
+        top: calc(100% + 8px);
+
+        left: 0;
+
+        right: 0;
+
+        width: 100%;
+
+        padding: 18px 22px 20px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        justify-content: flex-start;
+
+        gap: 0;
+
+        background: var(--granat);
+
+        border-radius: 28px;
+
+        box-shadow:
+            0 10px 30px rgba(0,0,0,.18);
+
+        z-index: 10001;
+
+    }
+
+
+    /* QUAN ESTÀ OBERT */
+
+    .main-nav.active {
+
+        display: flex;
+
+    }
+
+
+    /* ENLLAÇOS */
+
+    .main-nav a {
+
+        width: 100%;
+
+        padding: 10px 0;
+
+        font-size: .9rem;
+
+    }
+
+
+    /* LÍNIA DE SUBRATLLAT */
+
+    .main-nav a::after {
+
+        bottom: 5px;
+
+    }
+
+
+    /* CASETA */
+
+    .main-nav .home-link {
+
+        gap: 8px;
+
+    }
+
+
+    .main-nav .home-link i {
+
+        font-size: .8rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÒBIL PETIT
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .site-header {
+
+        top: 12px;
+
+    }
+
+
+    .header-container {
+
+        width: calc(100% - 24px);
+
+        height: 64px;
+
+        padding:
+            3px 10px 3px 12px;
+
+        border-radius: 40px;
+
+    }
+
+
+    .logo {
+
+        width: 138px;
+
+    }
+
+
+    .logo img {
+
+        width: 138px;
+
+    }
+
+
+    .menu-toggle {
+
+        width: 42px;
+
+        height: 42px;
+
+        margin-left: auto;
+
+        font-size: 1.45rem;
+
+    }
+
+
+    .main-nav {
+
+        top: calc(100% + 7px);
+
+        padding:
+            15px 20px 18px;
+
+        border-radius: 24px;
+
+    }
+
+
+    .main-nav a {
+
+        padding: 9px 0;
+
+        font-size: .82rem;
+
+    }
+
+}
+
+/* =========================================================
    HERO
 ========================================================= */
 
