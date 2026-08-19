@@ -1111,64 +1111,244 @@ h3 {
 
 
 /* =========================================================
-   PRESENTACIÓ
+   EL GRUP
 ========================================================= */
 
-.intro-section {
-    padding: 85px 0;
+.group-section {
+
+    padding: 42px 0 48px;
+
+    background: rgba(255, 255, 255, .42);
+
 }
 
-.intro-container {
-    width: min(var(--amplada), 90%);
 
-    margin: auto;
+/* =========================================================
+   CONTENIDOR
+========================================================= */
+
+.group-container {
+
+    width: min(
+        1100px,
+        90%
+    );
+
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        1.1fr .9fr;
-
-    gap: 75px;
+        1fr
+        1fr;
 
     align-items: center;
+
+    gap: 55px;
+
 }
 
-.intro-text h1 {
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.group-content {
+
+    min-width: 0;
+
+}
+
+
+.group-kicker {
+
+    margin: 0 0 3px;
+
     color: var(--granat);
 
-    font-size:
-        clamp(3rem, 5vw, 4.8rem);
+    font-family:
+        'Inter',
+        Helvetica,
+        Arial,
+        sans-serif;
 
-    line-height: .88;
+    font-size: .68rem;
 
-    margin-bottom: 24px;
+    font-weight: 700;
+
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
+
 }
 
-.intro-text > p:last-child {
-    max-width: 650px;
 
-    font-size: 1.35rem;
+.group-content h2 {
 
-    line-height: 1.45;
+    margin: 0 0 18px;
+
+    color: var(--granat);
+
+    font-family:
+        'Bebas Neue',
+        sans-serif;
+
+    font-size: 3rem;
+
+    font-weight: 400;
+
+    line-height: .9;
+
 }
 
-.intro-photo {
+
+.group-content p {
+
+    margin: 0 0 12px;
+
+    color: #292929;
+
+    font-family:
+        'Inter',
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: .88rem;
+
+    line-height: 1.55;
+
+}
+
+
+/* =========================================================
+   FOTOGRAFIA
+========================================================= */
+
+.group-image {
+
     display: flex;
 
+    align-items: center;
+
     justify-content: center;
+
 }
 
-.intro-photo img {
+
+.group-image img {
+
     display: block;
 
-    width: 100%;
-    max-width: 440px;
+    width: 75%;
 
-    border-radius: 5px;
+    height: auto;
 
-    box-shadow: var(--ombra);
+    border-radius: 14px;
 
-    transform: rotate(2deg);
+    object-fit: cover;
+
+}
+
+
+/* =========================================================
+   ENLLAÇ INSTAGRAM
+========================================================= */
+
+.group-instagram {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 5px;
+
+    color: var(--granat);
+
+    font-family:
+        'Inter',
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: .82rem;
+
+    text-decoration: none;
+
+    border-bottom:
+        1px solid
+        var(--granat);
+
+    padding-bottom: 2px;
+
+    transition:
+        opacity .2s ease;
+
+}
+
+
+.group-instagram:hover {
+
+    opacity: .65;
+
+}
+
+
+/* =========================================================
+   MÒBIL
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .group-section {
+
+        padding: 34px 0 38px;
+
+    }
+
+
+    .group-container {
+
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+    }
+
+
+    .group-image {
+
+        order: -1;
+
+    }
+
+
+    .group-image img {
+
+        width: 75%;
+
+    }
+
+
+    .group-content h2 {
+
+        font-size: 2.5rem;
+
+    }
+
+
+    .group-content p {
+
+        font-size: .82rem;
+
+        line-height: 1.5;
+
+    }
+
 }
 
 
