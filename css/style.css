@@ -7,6 +7,7 @@
     --granat: #74151b;
     --granat-fosc: #4d0e13;
     --granat-clar: #8b242b;
+   --taronja: #c87545;
 
     --paper: #e8e3d5;
     --paper-clar: #f3efe5;
@@ -1002,7 +1003,7 @@ h3 {
 
     margin: 0;
 
-    padding: 22px 0 0;
+    padding: 14px 0 0;
 
     background: var(--granat-fosc);
 
@@ -1012,25 +1013,27 @@ h3 {
 
 
 /* =========================================================
-   CONTINGUT FOOTER
+   CONTINGUT PRINCIPAL DEL FOOTER
 ========================================================= */
 
 .footer-container {
 
-    width: min(1200px, 90%);
+    width: min(1200px, calc(100% - 48px));
 
     margin: 0 auto;
+
+    min-height: 115px;
 
     display: grid;
 
     grid-template-columns:
-        1.2fr
+        1.35fr
         1fr
         auto;
 
     align-items: center;
 
-    gap: 45px;
+    gap: 35px;
 
 }
 
@@ -1045,29 +1048,42 @@ h3 {
 
     align-items: center;
 
-    gap: 28px;
+    gap: 25px;
 
 }
 
 
 /*
-   No fixem una alçada artificial al logo.
-   Això evita que el PNG quedi visualment desplaçat
-   per l'espai transparent que té.
+   El contenidor té una alçada controlada
+   perquè no comptem tot l'aire del PNG.
 */
 
 .footer-logo {
+
+    position: relative;
 
     display: flex;
 
     align-items: center;
 
+    justify-content: center;
+
     width: 190px;
+
+    height: 78px;
 
     flex-shrink: 0;
 
+    overflow: hidden;
+
 }
 
+
+/*
+   El logo continua sent gran,
+   però el retallem visualment per eliminar
+   l'espai transparent del PNG.
+*/
 
 .footer-logo img {
 
@@ -1075,22 +1091,24 @@ h3 {
 
     width: 190px;
 
-    height: auto;
-
     max-width: none;
+
+    height: auto;
 
     filter:
         brightness(0)
         invert(1);
 
     transform:
-        rotate(-4deg);
+        rotate(-4deg)
+        translateY(-2px);
 
-    transform-origin:
-        center;
+    transform-origin: center;
 
 }
 
+
+/* CORREU */
 
 .footer-email {
 
@@ -1111,7 +1129,6 @@ h3 {
 
 }
 
-
 .footer-email:hover {
 
     opacity: .7;
@@ -1130,9 +1147,9 @@ h3 {
     grid-template-columns:
         repeat(2, max-content);
 
-    column-gap: 32px;
+    column-gap: 30px;
 
-    row-gap: 6px;
+    row-gap: 4px;
 
 }
 
@@ -1143,6 +1160,8 @@ h3 {
 
     width: fit-content;
 
+    padding-bottom: 2px;
+
     color: var(--crema);
 
     font-family:
@@ -1151,16 +1170,18 @@ h3 {
         Arial,
         sans-serif;
 
-    font-size: .76rem;
+    font-size: .72rem;
 
     font-weight: 500;
 
     text-transform: uppercase;
 
-    padding-bottom: 3px;
+    white-space: nowrap;
 
 }
 
+
+/* SUBRATLLAT */
 
 .footer-nav a::after {
 
@@ -1192,7 +1213,7 @@ h3 {
 
 
 /* =========================================================
-   XARXES
+   XARXES SOCIALS
 ========================================================= */
 
 .footer-socials {
@@ -1224,7 +1245,7 @@ h3 {
 
     color: var(--granat-fosc);
 
-    font-size: .9rem;
+    font-size: .88rem;
 
     transition:
         transform .25s ease,
@@ -1267,18 +1288,15 @@ h3 {
 
 /* =========================================================
    COPYRIGHT
-   AQUEST ÉS L'ÚLTIM ELEMENT FÍSIC DE LA WEB
 ========================================================= */
 
 .footer-copyright {
 
     width: 100%;
 
-    margin: 18px 0 0;
+    margin: 8px 0 0;
 
-    padding: 7px 15px;
-
-    box-sizing: border-box;
+    padding: 6px 12px;
 
     background: var(--taronja);
 
@@ -1292,7 +1310,7 @@ h3 {
         Arial,
         sans-serif;
 
-    font-size: .63rem;
+    font-size: .62rem;
 
     line-height: 1.2;
 
@@ -1300,38 +1318,27 @@ h3 {
 
 
 /* =========================================================
-   MÒBIL
+   FOOTER — MÒBIL
 ========================================================= */
 
 @media (max-width: 900px) {
 
-    .site-footer {
-
-        padding-top: 20px;
-
-    }
-
-
     .footer-container {
 
-        width: 90%;
+        width: calc(100% - 36px);
 
-        grid-template-columns: 1fr;
+        min-height: 0;
 
-        gap: 18px;
+        grid-template-columns: 1fr 1fr;
 
-        align-items: flex-start;
+        gap: 20px;
 
     }
 
 
     .footer-brand {
 
-        align-items: center;
-
-        justify-content: flex-start;
-
-        gap: 18px;
+        grid-column: 1 / -1;
 
     }
 
@@ -1339,6 +1346,8 @@ h3 {
     .footer-logo {
 
         width: 155px;
+
+        height: 65px;
 
     }
 
@@ -1349,19 +1358,66 @@ h3 {
 
     }
 
+}
+
+
+@media (max-width: 600px) {
+
+    .site-footer {
+
+        padding-top: 12px;
+
+    }
+
+
+    .footer-container {
+
+        width: calc(100% - 28px);
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+
+    }
+
+
+    .footer-brand {
+
+        grid-column: auto;
+
+        gap: 15px;
+
+    }
+
+
+    .footer-logo {
+
+        width: 140px;
+
+        height: 60px;
+
+    }
+
+
+    .footer-logo img {
+
+        width: 140px;
+
+    }
+
 
     .footer-email {
 
-        font-size: .75rem;
+        font-size: .72rem;
 
     }
 
 
     .footer-nav {
 
-        column-gap: 28px;
+        column-gap: 25px;
 
-        row-gap: 7px;
+        row-gap: 5px;
 
     }
 
@@ -1375,313 +1431,14 @@ h3 {
 
     .footer-copyright {
 
-        margin-top: 18px;
+        margin-top: 8px;
 
-        padding-top: 7px;
+        padding-top: 6px;
 
-        padding-bottom: 7px;
-
-    }
-
-}
-
-/* =========================================================
-   MÒBIL
-========================================================= */
-
-@media (max-width: 900px) {
-
-    /* ==========================================
-       MENÚ MÒBIL
-    ========================================== */
-
-    .site-header {
-
-        top: 10px;
+        padding-bottom: 6px;
 
     }
 
-
-    .header-container {
-
-        width:
-            calc(100% - 24px);
-
-        height: 66px;
-
-        padding:
-            3px 16px;
-
-        position: relative;
-
-    }
-
-
-    .logo {
-
-        width: 132px;
-
-        height: 100%;
-
-        margin-left: -8px;
-
-    }
-
-
-    .logo img {
-
-        width: 132px;
-
-        max-width: none;
-
-    }
-
-
-    .main-nav {
-
-        display: none;
-
-        position: absolute;
-
-        top: calc(100% + 10px);
-
-        left: 0;
-
-        width: 100%;
-
-        padding: 22px;
-
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        justify-content: flex-start;
-
-        gap: 18px;
-
-        background:
-            var(--granat);
-
-        border-radius: 24px;
-
-        box-shadow:
-            0 12px 30px rgba(0,0,0,.2);
-
-    }
-
-
-    .main-nav.active {
-
-        display: flex;
-
-    }
-
-
-    .main-nav a {
-
-        width: 100%;
-
-        padding-bottom: 7px;
-
-        font-size: .9rem;
-
-    }
-
-
-    .main-nav a::after {
-
-        height: 1px;
-
-    }
-
-
-    .socials {
-
-        display: none;
-
-    }
-
-
-    .menu-toggle {
-
-        display: flex;
-
-        flex-shrink: 0;
-
-           margin-left: auto;
-
-
-    }
-
-    /* HERO */
-
-    .hero-section {
-        padding-top: 84px;
-    }
-
-    .hero-image {
-        height: 520px;
-
-        min-height: 520px;
-    }
-
-
-    /* PRESENTACIÓ */
-
-    .intro-container {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-    .intro-photo {
-        order: -1;
-    }
-
-
-    /* CONCERTS */
-
-    .concerts-top {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 25px;
-    }
-
-    .concert-item {
-        grid-template-columns:
-            70px 1fr;
-
-        gap: 18px;
-    }
-
-    .concert-ticket {
-        grid-column: 2;
-
-        justify-content: flex-start;
-    }
-
-
-    /* VIDEO */
-
-    .videos-grid {
-        grid-template-columns: 1fr;
-    }
-
-
-    /* CONTACTE */
-
-    .contact-container {
-        grid-template-columns: 1fr;
-
-        gap: 45px;
-    }
-
-
-    /* DOSSIER */
-
-    .dossier-container {
-        flex-direction: column;
-
-        align-items: flex-start;
-    }
-
-    .dossier-links {
-        flex-wrap: wrap;
-    }
-
-
-    /* FOOTER */
-
-    .footer-container {
-        grid-template-columns:
-            1fr 1fr;
-    }
-}
-
-
-/* =========================================================
-   MÒBIL PETIT
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .intro-section,
-    .music-section,
-    .contact-section {
-        padding:
-            60px 0;
-    }
-
-    .concerts-section {
-        padding:
-            50px 0;
-    }
-
-    .videos-section {
-        padding:
-            60px 0;
-    }
-
-    .section-heading {
-        margin-bottom: 28px;
-    }
-
-    .concerts-heading {
-        gap: 17px;
-    }
-
-    .concert-polaroid {
-        width: 105px;
-    }
-
-    .concert-item {
-        grid-template-columns:
-            60px 1fr;
-
-        padding:
-            17px 0;
-    }
-
-    .concert-date .day {
-        font-size: 2.8rem;
-    }
-
-    .concert-info h3 {
-        font-size: 1.5rem;
-    }
-
-    .album-card {
-        width: 75%;
-    }
-
-    .album-links {
-        flex-direction: column;
-
-        align-items: stretch;
-    }
-
-    .album-links a {
-        text-align: center;
-    }
-
-    .dossier-links {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        gap: 12px;
-    }
-
-    .footer-container {
-        grid-template-columns: 1fr;
-
-        gap: 25px;
-
-        padding:
-            40px 0;
-    }
 }
 
 
