@@ -302,3 +302,126 @@ if (contactForm) {
     });
 
 }
+
+/* =========================================================
+   VIDEOLYRICS
+========================================================= */
+
+const videolyricsTrack =
+    document.querySelector('.videolyrics-track');
+
+const videolyricsPrev =
+    document.querySelector('.videolyrics-prev');
+
+const videolyricsNext =
+    document.querySelector('.videolyrics-next');
+
+
+if (
+    videolyricsTrack &&
+    videolyricsPrev &&
+    videolyricsNext
+) {
+
+    let videolyricsPosition = 0;
+
+
+    function updateVideolyrics() {
+
+        const cards =
+            videolyricsTrack.querySelectorAll(
+                '.videolyrics-card'
+            );
+
+
+        if (!cards.length) return;
+
+
+        const card =
+            cards[0];
+
+
+        const cardWidth =
+            card.getBoundingClientRect().width;
+
+
+        const gap =
+            parseFloat(
+                getComputedStyle(
+                    videolyricsTrack
+                ).gap
+            ) || 0;
+
+
+        const visibleWidth =
+            document.querySelector(
+                '.videolyrics-window'
+            ).getBoundingClientRect().width;
+
+
+        const totalWidth =
+            videolyricsTrack.scrollWidth;
+
+
+        const maxPosition =
+            Math.max(
+                0,
+                Math.ceil(
+                    (totalWidth - visibleWidth) /
+                    (cardWidth + gap)
+                )
+            );
+
+
+        videolyricsPrev.disabled =
+            videolyricsPosition <= 0;
+
+
+        videolyricsNext.disabled =
+            videolyricsPosition >= maxPosition;
+
+
+        const movement =
+            videolyricsPosition *
+            (cardWidth + gap);
+
+
+        videolyricsTrack.style.transform =
+            `translateX(-${movement}px)`;
+
+    }
+
+
+    videolyricsNext.addEventListener(
+        'click',
+        () => {
+
+            videolyricsPosition++;
+
+            updateVideolyrics();
+
+        }
+    );
+
+
+    videolyricsPrev.addEventListener(
+        'click',
+        () => {
+
+            videolyricsPosition--;
+
+            updateVideolyrics();
+
+        }
+    );
+
+
+    window.addEventListener(
+        'resize',
+        updateVideolyrics
+    );
+
+
+    updateVideolyrics();
+
+}
