@@ -1114,11 +1114,11 @@ h3 {
    EL GRUP
 ========================================================= */
 
-.group-section {
+.intro-section {
 
     padding: 42px 0 48px;
 
-    /* Mateix fons blanquinós que els Videolyrics */
+    /* Mateix fons que els Videolyrics */
 
     background: rgba(255, 255, 255, .42);
 
@@ -1129,7 +1129,7 @@ h3 {
    CONTENIDOR
 ========================================================= */
 
-.group-container {
+.intro-container {
 
     width: min(
         1100px,
@@ -1155,37 +1155,21 @@ h3 {
    TEXT
 ========================================================= */
 
-.group-content {
+.intro-text {
 
     min-width: 0;
 
 }
 
 
-.group-kicker {
+.intro-text .section-label {
 
-    margin: 0 0 3px;
-
-    color: var(--granat);
-
-    font-family:
-        'Inter',
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    font-size: .68rem;
-
-    font-weight: 700;
-
-    letter-spacing: .1em;
-
-    text-transform: uppercase;
+    margin-bottom: 3px;
 
 }
 
 
-.group-content h2 {
+.intro-text h1 {
 
     margin: 0 0 18px;
 
@@ -1204,7 +1188,7 @@ h3 {
 }
 
 
-.group-content p {
+.intro-text p:not(.section-label) {
 
     margin: 0 0 12px;
 
@@ -1227,7 +1211,7 @@ h3 {
    FOTOGRAFIA
 ========================================================= */
 
-.group-image {
+.intro-photo {
 
     display: flex;
 
@@ -1238,12 +1222,7 @@ h3 {
 }
 
 
-/*
-   La imatge queda un 25% més petita
-   que ocupant tota la columna.
-*/
-
-.group-image img {
+.intro-photo img {
 
     display: block;
 
@@ -1259,57 +1238,12 @@ h3 {
 
 
 /* =========================================================
-   INSTAGRAM
-========================================================= */
-
-.group-instagram {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    margin-top: 5px;
-
-    color: var(--granat);
-
-    font-family:
-        'Inter',
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    font-size: .82rem;
-
-    text-decoration: none;
-
-    border-bottom:
-        1px solid
-        var(--granat);
-
-    padding-bottom: 2px;
-
-    transition:
-        opacity .2s ease;
-
-}
-
-
-.group-instagram:hover {
-
-    opacity: .65;
-
-}
-
-
-/* =========================================================
    MÒBIL
 ========================================================= */
 
 @media (max-width: 700px) {
 
-    .group-section {
+    .intro-section {
 
         padding: 34px 0 38px;
 
@@ -1319,7 +1253,7 @@ h3 {
     }
 
 
-    .group-container {
+    .intro-container {
 
         width: 90%;
 
@@ -1330,28 +1264,28 @@ h3 {
     }
 
 
-    .group-image {
+    .intro-photo {
 
         order: -1;
 
     }
 
 
-    .group-image img {
+    .intro-photo img {
 
         width: 75%;
 
     }
 
 
-    .group-content h2 {
+    .intro-text h1 {
 
         font-size: 2.5rem;
 
     }
 
 
-    .group-content p {
+    .intro-text p:not(.section-label) {
 
         font-size: .82rem;
 
@@ -1360,7 +1294,6 @@ h3 {
     }
 
 }
-
 
 /* =========================================================
    CONCERTS 2025
