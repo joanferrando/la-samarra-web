@@ -999,119 +999,361 @@ h3 {
 ========================================================= */
 
 .site-footer {
+
     background: var(--granat-fosc);
 
     color: var(--crema);
+
+    padding-top: 28px;
+
 }
 
+
+/* CONTENIDOR PRINCIPAL */
+
 .footer-container {
-    width: min(var(--amplada), 90%);
 
-    margin: auto;
+    width: min(
+        1200px,
+        90%
+    );
 
-    padding: 50px 0;
+    margin: 0 auto;
 
     display: grid;
 
     grid-template-columns:
-        1.2fr 1fr 1fr 1fr;
+        1.2fr
+        1fr
+        auto;
 
-    gap: 40px;
+    align-items: center;
+
+    gap: 50px;
+
 }
 
-.footer-brand img {
-    width: 95px;
 
-    height: 95px;
+/* =========================================================
+   LOGO + CORREU
+========================================================= */
 
-    object-fit: contain;
-}
+.footer-brand {
 
-.footer-contact p {
-    font-family:
-        'Inter',
-        sans-serif;
-
-    font-size: .7rem;
-
-    text-transform: uppercase;
-
-    letter-spacing: .1em;
-
-    margin-bottom: 7px;
-}
-
-.footer-contact a {
-    font-size: 1rem;
-}
-
-.footer-nav {
     display: flex;
 
     flex-direction: column;
 
-    gap: 5px;
+    align-items: flex-start;
+
 }
 
-.footer-nav a {
+
+.footer-logo {
+
+    display: block;
+
+    width: 205px;
+
+    height: 72px;
+
+    overflow: visible;
+
+}
+
+
+.footer-logo img {
+
+    display: block;
+
+    width: 205px;
+
+    height: auto;
+
+    max-width: none;
+
+    filter:
+        brightness(0)
+        invert(1);
+
+    transform:
+        rotate(-4deg);
+
+    transform-origin:
+        center;
+
+}
+
+
+.footer-email {
+
+    margin-top: 2px;
+
+    color: var(--crema);
+
     font-family:
         'Inter',
+        Helvetica,
+        Arial,
         sans-serif;
 
-    font-size: .68rem;
+    font-size: .8rem;
+
+    transition:
+        opacity .25s ease;
+
+}
+
+
+.footer-email:hover {
+
+    opacity: .7;
+
+}
+
+
+/* =========================================================
+   NAVEGACIÓ
+========================================================= */
+
+.footer-nav {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, auto);
+
+    column-gap: 35px;
+
+    row-gap: 7px;
+
+}
+
+
+.footer-nav a {
+
+    position: relative;
+
+    width: fit-content;
+
+    color: var(--crema);
+
+    font-family:
+        'Inter',
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: .78rem;
+
+    font-weight: 500;
 
     text-transform: uppercase;
 
-    opacity: .8;
+    padding-bottom: 3px;
 
-    transition: opacity .2s ease;
+    transition:
+        color .25s ease;
+
 }
 
-.footer-nav a:hover {
-    opacity: 1;
+
+.footer-nav a::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 1px;
+
+    background: var(--crema);
+
+    transition:
+        width .28s ease;
+
 }
+
+
+.footer-nav a:hover::after {
+
+    width: 100%;
+
+}
+
+
+/* =========================================================
+   XARXES
+========================================================= */
 
 .footer-socials {
+
     display: flex;
 
-    gap: 8px;
+    align-items: center;
+
+    gap: 9px;
+
 }
 
-.footer-socials a {
-    width: 36px;
-    height: 36px;
 
-    border:
-        1px solid rgba(255, 255, 255, .4);
+.footer-socials a {
+
+    width: 38px;
+
+    height: 38px;
 
     border-radius: 50%;
 
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
-    font-family:
-        'Inter',
-        sans-serif;
+    background: var(--crema);
 
-    font-size: .55rem;
+    color: var(--granat-fosc);
 
-    text-transform: uppercase;
+    font-size: .95rem;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
 }
 
-.footer-bottom {
-    background: #a35a3b;
+
+.footer-socials a:hover {
+
+    transform:
+        translateY(-2px);
+
+    background: white;
+
+}
+
+
+/* BANDCAMP */
+
+.footer-socials .bandcamp-logo {
+
+    display: block;
+
+    width: 14px;
+
+    height: 14px;
+
+    background: var(--granat-fosc);
+
+    clip-path: polygon(
+        25% 0%,
+        100% 0%,
+        75% 100%,
+        0% 100%
+    );
+
+}
+
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footer-copyright {
+
+    margin-top: 24px;
+
+    padding: 8px 20px;
 
     text-align: center;
 
-    padding: 8px;
+    background: var(--taronja);
+
+    color: white;
 
     font-family:
         'Inter',
+        Helvetica,
+        Arial,
         sans-serif;
 
-    font-size: .62rem;
+    font-size: .65rem;
+
+    letter-spacing: .02em;
+
+}
+
+
+/* =========================================================
+   MÒBIL
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-footer {
+
+        padding-top: 25px;
+
+    }
+
+
+    .footer-container {
+
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+
+        align-items: flex-start;
+
+    }
+
+
+    .footer-logo,
+    .footer-logo img {
+
+        width: 175px;
+
+    }
+
+
+    .footer-logo {
+
+        height: 65px;
+
+    }
+
+
+    .footer-nav {
+
+        grid-template-columns:
+            repeat(2, auto);
+
+        column-gap: 30px;
+
+        row-gap: 8px;
+
+    }
+
+
+    .footer-socials {
+
+        margin-top: 2px;
+
+    }
+
+
+    .footer-copyright {
+
+        margin-top: 20px;
+
+    }
+
 }
 
 
