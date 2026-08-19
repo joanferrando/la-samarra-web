@@ -944,56 +944,232 @@ h3 {
 
 
 /* =========================================================
-   DOSSIER
+   DOSSIER TÈCNIC
 ========================================================= */
 
-.dossier-section {
-    border-top:
-        1px solid rgba(116, 21, 27, .25);
+.technical-dossier {
 
-    padding: 32px 0;
+    padding: 42px 0 48px;
+
 }
 
-.dossier-container {
-    width: min(var(--amplada), 90%);
 
-    margin: auto;
+.technical-dossier .section-header {
+
+    margin-bottom: 22px;
+
+}
+
+
+.technical-dossier h2 {
+
+    margin: 0;
+
+    font-family:
+        'Bebas Neue',
+        sans-serif;
+
+    font-size: 2.2rem;
+
+    font-weight: 400;
+
+    color: var(--granat);
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   BOTONS
+========================================================= */
+
+.dossier-files {
+
+    width: min(
+        1200px,
+        90%
+    );
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 14px;
+
+}
+
+
+.dossier-file {
+
+    min-height: 72px;
+
+    padding: 12px 18px;
+
+    box-sizing: border-box;
 
     display: flex;
 
     align-items: center;
 
-    justify-content: space-between;
+    gap: 13px;
 
-    gap: 30px;
+    background: white;
+
+    color: #171717;
+
+    border: 1px solid rgba(77, 14, 19, .10);
+
+    border-radius: 12px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 3px 12px rgba(0,0,0,.07);
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
 }
 
-.dossier-container h2 {
+
+/* ICONA */
+
+.dossier-file i {
+
+    flex-shrink: 0;
+
+    width: 30px;
+
+    text-align: center;
+
+    font-size: 1.35rem;
+
     color: var(--granat);
 
-    font-size: 2.4rem;
+    transition:
+        color .25s ease;
+
 }
 
-.dossier-links {
-    display: flex;
 
-    align-items: center;
+/* TEXT */
 
-    gap: 28px;
-}
-
-.dossier-links a {
-    color: var(--granat);
+.dossier-file span {
 
     font-family:
         'Inter',
+        Helvetica,
+        Arial,
         sans-serif;
 
-    font-size: .68rem;
+    font-size: .85rem;
 
-    text-transform: uppercase;
+    font-weight: 600;
+
+    line-height: 1.15;
+
 }
 
+
+/* DOSSIER DE CONTRACTACIÓ */
+
+.dossier-file:first-child span {
+
+    font-size: .72rem;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.dossier-file:hover {
+
+    background: var(--granat);
+
+    color: white;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 8px 20px rgba(77, 14, 19, .20);
+
+}
+
+
+.dossier-file:hover i {
+
+    color: white;
+
+}
+
+
+/* =========================================================
+   MÒBIL
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .dossier-files {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .technical-dossier {
+
+        padding: 32px 0 38px;
+
+    }
+
+
+    .technical-dossier h2 {
+
+        font-size: 1.9rem;
+
+    }
+
+
+    .technical-dossier .section-header {
+
+        margin-bottom: 16px;
+
+    }
+
+
+    .dossier-files {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+    }
+
+
+    .dossier-file {
+
+        min-height: 64px;
+
+    }
+
+}
 
 /* =========================================================
    FOOTER
