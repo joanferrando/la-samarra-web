@@ -176,3 +176,129 @@ if (music && playButton && muteButton) {
     });
 
 }
+
+/* =========================================================
+   FORMULARI DE CONTACTE — FORMSPREE
+========================================================= */
+
+const contactForm =
+    document.getElementById('contact-form');
+
+const contactSuccess =
+    document.getElementById('contact-success');
+
+const contactError =
+    document.getElementById('contact-error');
+
+
+if (contactForm) {
+
+    contactForm.addEventListener('submit', async (event) => {
+
+        event.preventDefault();
+
+
+        const submitButton =
+            contactForm.querySelector(
+                '.contact-submit'
+            );
+
+
+        /* Estat d'enviament */
+
+        submitButton.disabled = true;
+
+        submitButton.innerHTML =
+            'ENVIANT...';
+
+
+        if (contactSuccess) {
+
+            contactSuccess.textContent = '';
+
+        }
+
+
+        if (contactError) {
+
+            contactError.textContent = '';
+
+        }
+
+
+        try {
+
+            const response =
+                await fetch(
+                    contactForm.action,
+                    {
+                        method: 'POST',
+
+                        body:
+                            new FormData(contactForm),
+
+                        headers: {
+                            'Accept':
+                                'application/json'
+                        }
+                    }
+                );
+
+
+            if (response.ok) {
+
+                /* ÈXIT */
+
+                contactForm.reset();
+
+
+                if (contactSuccess) {
+
+                    contactSuccess.textContent =
+                        'Missatge enviat correctament. Gràcies!';
+
+                }
+
+
+                submitButton.innerHTML =
+                    'MISSATGE ENVIAT ✓';
+
+
+            } else {
+
+                throw new Error(
+                    'Error enviant el formulari'
+                );
+
+            }
+
+
+        } catch (error) {
+
+            console.error(
+                'Error del formulari:',
+                error
+            );
+
+
+            if (contactError) {
+
+                contactError.textContent =
+                    'No s’ha pogut enviar el missatge. Torna-ho a provar.';
+
+            }
+
+
+            submitButton.innerHTML =
+                'ENVIAR MISSATGE';
+
+        }
+
+
+        /* Tornem a activar el botó */
+
+        submitButton.disabled = false;
+
+    });
+
+}
