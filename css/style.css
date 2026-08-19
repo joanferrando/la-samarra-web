@@ -1552,8 +1552,8 @@ h3 {
     display: grid;
 
     grid-template-columns:
-        1.15fr
-        .85fr;
+        .85fr
+        1.15fr;
 
     align-items: center;
 
@@ -1563,7 +1563,20 @@ h3 {
 
 
 /* =========================================================
-   TEXT
+   INFORMACIÓ — DRETA
+========================================================= */
+
+.contact-info {
+
+    grid-column: 2;
+
+    grid-row: 1;
+
+}
+
+
+/* =========================================================
+   TÍTOLS
 ========================================================= */
 
 .contact-kicker {
@@ -1847,7 +1860,7 @@ h3 {
 
 
 /* =========================================================
-   MISSATGES
+   MISSATGES FORMULARI
 ========================================================= */
 
 .contact-form-message,
@@ -1881,10 +1894,14 @@ h3 {
 
 
 /* =========================================================
-   FOTOGRAFIA
+   FOTOGRAFIA — ESQUERRA
 ========================================================= */
 
 .contact-image {
+
+    grid-column: 1;
+
+    grid-row: 1;
 
     display: flex;
 
@@ -1928,6 +1945,10 @@ h3 {
 
     .contact-container {
 
+        width: 90%;
+
+        display: grid;
+
         grid-template-columns: 1fr;
 
         gap: 25px;
@@ -1935,16 +1956,31 @@ h3 {
     }
 
 
-    .contact-info h2 {
+    /* Tornem a l'ordre vertical */
 
-        font-size: 3.2rem;
+    .contact-image {
+
+        grid-column: auto;
+
+        grid-row: auto;
+
+        order: -1;
 
     }
 
 
-    .contact-image {
+    .contact-info {
 
-        order: -1;
+        grid-column: auto;
+
+        grid-row: auto;
+
+    }
+
+
+    .contact-info h2 {
+
+        font-size: 3.2rem;
 
     }
 
@@ -1958,7 +1994,8 @@ h3 {
 
     .contact-form-row {
 
-        grid-template-columns: 1fr;
+        grid-template-columns:
+            1fr;
 
         gap: 10px;
 
@@ -1966,6 +2003,10 @@ h3 {
 
 }
 
+
+/* =========================================================
+   MÒBIL PETIT
+========================================================= */
 
 @media (max-width: 500px) {
 
