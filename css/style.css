@@ -1370,7 +1370,7 @@ h3 {
 
 .albums-section {
 
-    padding: 42px 0 48px;
+    padding: 42px 0 32px;
 
 }
 
@@ -1475,7 +1475,7 @@ h3 {
 
     position: relative;
 
-    width: 80%;
+    width: 88%;
 
     aspect-ratio: 1 / 1;
 
@@ -1576,7 +1576,7 @@ h3 {
 
 .album-info {
 
-    width: 80%;
+    width: 88%;
 
     padding-top: 12px;
 
@@ -1761,7 +1761,7 @@ h3 {
 
     .albums-section {
 
-        padding: 34px 0 40px;
+        padding: 34px 0 28px;
 
     }
 
@@ -1788,21 +1788,21 @@ h3 {
 
         grid-template-columns: 1fr;
 
-        gap: 38px;
+        gap: 34px;
 
     }
 
 
     .album-cover {
 
-        width: 80%;
+        width: 88%;
 
     }
 
 
     .album-info {
 
-        width: 80%;
+        width: 88%;
 
         padding-top: 10px;
 
