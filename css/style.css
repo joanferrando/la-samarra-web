@@ -949,14 +949,31 @@ h3 {
 
 .technical-dossier {
 
-    padding: 42px 0 48px;
+    padding: 32px 0 34px;
+
+}
+
+
+/* CAPÇALERA + BOTONS */
+
+.technical-dossier .section-header {
+
+    width: min(var(--amplada), 90%);
+
+    margin: 0 auto;
 
 }
 
 
 .technical-dossier .section-header {
 
-    margin-bottom: 22px;
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 35px;
 
 }
 
@@ -964,6 +981,10 @@ h3 {
 .technical-dossier h2 {
 
     margin: 0;
+
+    flex-shrink: 0;
+
+    color: var(--granat);
 
     font-family:
         'Bebas Neue',
@@ -973,7 +994,7 @@ h3 {
 
     font-weight: 400;
 
-    color: var(--granat);
+    line-height: 1;
 
     text-transform: uppercase;
 
@@ -986,49 +1007,46 @@ h3 {
 
 .dossier-files {
 
-    width: min(
-        1200px,
-        90%
-    );
-
-    margin: 0 auto;
+    flex: 1;
 
     display: grid;
 
     grid-template-columns:
         repeat(4, 1fr);
 
-    gap: 14px;
+    gap: 10px;
+
+    min-width: 0;
 
 }
 
 
+/* BOTÓ */
+
 .dossier-file {
 
-    min-height: 72px;
+    min-height: 58px;
 
-    padding: 12px 18px;
-
-    box-sizing: border-box;
+    padding: 9px 15px;
 
     display: flex;
 
     align-items: center;
 
-    gap: 13px;
+    gap: 11px;
 
     background: white;
 
     color: #171717;
 
-    border: 1px solid rgba(77, 14, 19, .10);
+    border: 1px solid rgba(77, 14, 19, .08);
 
-    border-radius: 12px;
+    border-radius: 18px;
 
     text-decoration: none;
 
     box-shadow:
-        0 3px 12px rgba(0,0,0,.07);
+        0 2px 8px rgba(0,0,0,.06);
 
     transition:
         background .25s ease,
@@ -1049,9 +1067,9 @@ h3 {
 
     text-align: center;
 
-    font-size: 1.35rem;
-
     color: var(--granat);
+
+    font-size: 1.55rem;
 
     transition:
         color .25s ease;
@@ -1069,11 +1087,13 @@ h3 {
         Arial,
         sans-serif;
 
-    font-size: .85rem;
+    font-size: .78rem;
 
     font-weight: 600;
 
-    line-height: 1.15;
+    line-height: 1.1;
+
+    white-space: nowrap;
 
 }
 
@@ -1082,7 +1102,7 @@ h3 {
 
 .dossier-file:first-child span {
 
-    font-size: .72rem;
+    font-size: .67rem;
 
 }
 
@@ -1098,10 +1118,10 @@ h3 {
     color: white;
 
     transform:
-        translateY(-3px);
+        translateY(-2px);
 
     box-shadow:
-        0 8px 20px rgba(77, 14, 19, .20);
+        0 6px 15px rgba(77, 14, 19, .18);
 
 }
 
@@ -1114,49 +1134,103 @@ h3 {
 
 
 /* =========================================================
-   MÒBIL
+   TABLET
 ========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1050px) {
 
-    .dossier-files {
+    .technical-dossier .section-header {
 
-        grid-template-columns:
-            repeat(2, 1fr);
-
-        gap: 12px;
-
-    }
-
-}
-
-
-@media (max-width: 600px) {
-
-    .technical-dossier {
-
-        padding: 32px 0 38px;
+        gap: 20px;
 
     }
 
 
     .technical-dossier h2 {
 
-        font-size: 1.9rem;
-
-    }
-
-
-    .technical-dossier .section-header {
-
-        margin-bottom: 16px;
+        font-size: 2rem;
 
     }
 
 
     .dossier-files {
 
-        grid-template-columns: 1fr;
+        gap: 8px;
+
+    }
+
+
+    .dossier-file {
+
+        padding: 8px 11px;
+
+        gap: 8px;
+
+    }
+
+
+    .dossier-file i {
+
+        width: 25px;
+
+        font-size: 1.4rem;
+
+    }
+
+
+    .dossier-file span {
+
+        font-size: .68rem;
+
+    }
+
+
+    .dossier-file:first-child span {
+
+        font-size: .58rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÒBIL
+========================================================= */
+
+@media (max-width: 800px) {
+
+    .technical-dossier {
+
+        padding: 30px 0 34px;
+
+    }
+
+
+    .technical-dossier .section-header {
+
+        display: block;
+
+    }
+
+
+    .technical-dossier h2 {
+
+        margin-bottom: 18px;
+
+        font-size: 2rem;
+
+    }
+
+
+    .dossier-files {
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
 
         gap: 10px;
 
@@ -1165,7 +1239,47 @@ h3 {
 
     .dossier-file {
 
-        min-height: 64px;
+        min-height: 58px;
+
+        padding: 9px 13px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .dossier-file span {
+
+        font-size: .72rem;
+
+    }
+
+
+    .dossier-file:first-child span {
+
+        font-size: .62rem;
+
+    }
+
+}
+
+
+/* =========================================================
+   MÒBIL PETIT
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .dossier-files {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .dossier-file {
+
+        min-height: 56px;
 
     }
 
