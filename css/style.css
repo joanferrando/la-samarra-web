@@ -1382,7 +1382,7 @@ h3 {
 .albums-header {
 
     width: min(
-        1200px,
+        820px,
         90%
     );
 
@@ -1440,7 +1440,7 @@ h3 {
 .albums-grid {
 
     width: min(
-        1000px,
+        820px,
         90%
     );
 
@@ -1484,24 +1484,6 @@ h3 {
     border-radius: 3px;
 
     background: #ddd;
-
-}
-
-
-/* Centrem la portada dins de cada columna */
-
-.album-card:first-child .album-cover {
-
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-
-.album-card:last-child .album-cover {
-
-    margin-left: auto;
-    margin-right: auto;
 
 }
 
@@ -1593,6 +1575,8 @@ h3 {
 ========================================================= */
 
 .album-info {
+
+    width: 80%;
 
     padding-top: 12px;
 
@@ -1784,6 +1768,8 @@ h3 {
 
     .albums-header {
 
+        width: 90%;
+
         margin-bottom: 20px;
 
     }
@@ -1815,6 +1801,8 @@ h3 {
 
 
     .album-info {
+
+        width: 80%;
 
         padding-top: 10px;
 
@@ -1853,7 +1841,6 @@ h3 {
     }
 
 }
-
 
 /* =========================================================
    VIDEOLYRICS
