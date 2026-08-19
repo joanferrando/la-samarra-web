@@ -949,40 +949,37 @@ h3 {
 
 .technical-dossier {
 
-    padding: 32px 0 34px;
+    padding: 28px 0 32px;
 
 }
 
 
-/* CAPÇALERA + BOTONS */
+/* =========================================================
+   TÍTOL + BOTONS
+========================================================= */
 
-.technical-dossier .section-header {
+.dossier-header {
 
-    width: min(var(--amplada), 90%);
+    width: min(1200px, 90%);
 
     margin: 0 auto;
 
-}
+    display: grid;
 
-
-.technical-dossier .section-header {
-
-    display: flex;
+    grid-template-columns: 235px 1fr;
 
     align-items: center;
 
-    justify-content: space-between;
-
-    gap: 35px;
+    gap: 24px;
 
 }
 
 
-.technical-dossier h2 {
+/* TÍTOL */
+
+.dossier-header h2 {
 
     margin: 0;
-
-    flex-shrink: 0;
 
     color: var(--granat);
 
@@ -1002,21 +999,21 @@ h3 {
 
 
 /* =========================================================
-   BOTONS
+   QUATRE BOTONS
 ========================================================= */
 
 .dossier-files {
 
-    flex: 1;
+    width: 100%;
+
+    margin: 0;
 
     display: grid;
 
     grid-template-columns:
-        repeat(4, 1fr);
+        repeat(4, minmax(0, 1fr));
 
     gap: 10px;
-
-    min-width: 0;
 
 }
 
@@ -1025,9 +1022,13 @@ h3 {
 
 .dossier-file {
 
-    min-height: 58px;
+    min-width: 0;
 
-    padding: 9px 15px;
+    height: 62px;
+
+    padding: 8px 14px;
+
+    box-sizing: border-box;
 
     display: flex;
 
@@ -1057,19 +1058,17 @@ h3 {
 }
 
 
-/* ICONA */
+/* ICONES */
 
 .dossier-file i {
 
-    flex-shrink: 0;
-
-    width: 30px;
+    flex: 0 0 30px;
 
     text-align: center;
 
     color: var(--granat);
 
-    font-size: 1.55rem;
+    font-size: 1.5rem;
 
     transition:
         color .25s ease;
@@ -1081,28 +1080,30 @@ h3 {
 
 .dossier-file span {
 
+    min-width: 0;
+
+    color: inherit;
+
     font-family:
         'Inter',
         Helvetica,
         Arial,
         sans-serif;
 
-    font-size: .78rem;
+    font-size: .75rem;
 
     font-weight: 600;
 
     line-height: 1.1;
 
-    white-space: nowrap;
-
 }
 
 
-/* DOSSIER DE CONTRACTACIÓ */
+/* CONTRACTACIÓ — UNA MICA MÉS PETIT */
 
 .dossier-file:first-child span {
 
-    font-size: .67rem;
+    font-size: .65rem;
 
 }
 
@@ -1137,16 +1138,18 @@ h3 {
    TABLET
 ========================================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1100px) {
 
-    .technical-dossier .section-header {
+    .dossier-header {
 
-        gap: 20px;
+        grid-template-columns: 200px 1fr;
+
+        gap: 18px;
 
     }
 
 
-    .technical-dossier h2 {
+    .dossier-header h2 {
 
         font-size: 2rem;
 
@@ -1155,39 +1158,37 @@ h3 {
 
     .dossier-files {
 
-        gap: 8px;
+        gap: 7px;
 
     }
 
 
     .dossier-file {
 
-        padding: 8px 11px;
-
-        gap: 8px;
+        padding: 8px 10px;
 
     }
 
 
     .dossier-file i {
 
-        width: 25px;
+        flex-basis: 26px;
 
-        font-size: 1.4rem;
+        font-size: 1.35rem;
 
     }
 
 
     .dossier-file span {
 
-        font-size: .68rem;
+        font-size: .65rem;
 
     }
 
 
     .dossier-file:first-child span {
 
-        font-size: .58rem;
+        font-size: .56rem;
 
     }
 
@@ -1202,21 +1203,23 @@ h3 {
 
     .technical-dossier {
 
-        padding: 30px 0 34px;
+        padding: 28px 0 32px;
 
     }
 
 
-    .technical-dossier .section-header {
+    .dossier-header {
+
+        width: 90%;
 
         display: block;
 
     }
 
 
-    .technical-dossier h2 {
+    .dossier-header h2 {
 
-        margin-bottom: 18px;
+        margin-bottom: 17px;
 
         font-size: 2rem;
 
@@ -1224,10 +1227,6 @@ h3 {
 
 
     .dossier-files {
-
-        width: 100%;
-
-        display: grid;
 
         grid-template-columns:
             repeat(2, 1fr);
@@ -1239,9 +1238,7 @@ h3 {
 
     .dossier-file {
 
-        min-height: 58px;
-
-        padding: 9px 13px;
+        height: 58px;
 
         border-radius: 16px;
 
@@ -1250,14 +1247,14 @@ h3 {
 
     .dossier-file span {
 
-        font-size: .72rem;
+        font-size: .7rem;
 
     }
 
 
     .dossier-file:first-child span {
 
-        font-size: .62rem;
+        font-size: .6rem;
 
     }
 
@@ -1273,13 +1270,6 @@ h3 {
     .dossier-files {
 
         grid-template-columns: 1fr;
-
-    }
-
-
-    .dossier-file {
-
-        min-height: 56px;
 
     }
 
