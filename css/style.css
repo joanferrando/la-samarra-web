@@ -681,6 +681,207 @@ h3 {
     object-fit: cover;
 }
 
+/* =========================================================
+   BOTÓ MÚSICA — HERO
+========================================================= */
+
+.hero-section {
+    position: relative;
+}
+
+
+/* =========================================================
+   REQUADRE GRANAT
+========================================================= */
+
+.hero-music-cta {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 25%;
+
+    transform: translateX(-50%);
+
+    z-index: 20;
+
+    width: min(330px, 78%);
+
+    padding: 13px 18px 13px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    background: var(--granat);
+
+    color: var(--crema);
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, .22);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+}
+
+
+/* =========================================================
+   TEXT
+========================================================= */
+
+.hero-music-text {
+
+    color: var(--crema);
+
+    font-family:
+        'Inter',
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    letter-spacing: .02em;
+
+    line-height: 1.15;
+
+    text-align: center;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   CERCLE DELS AURICULARS
+========================================================= */
+
+.hero-music-button {
+
+    width: 52px;
+
+    height: 52px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--crema);
+
+    color: var(--granat);
+
+    font-size: 1.15rem;
+
+    /* El cercle surt del requadre */
+
+    margin-bottom: -34px;
+
+    /* Traç granat al voltant */
+
+    border: 4px solid var(--granat);
+
+    box-shadow:
+        0 0 0 3px var(--granat);
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.hero-music-cta:hover {
+
+    transform:
+        translateX(-50%)
+        translateY(-3px);
+
+    background:
+        var(--granat-fosc);
+
+}
+
+
+.hero-music-cta:hover
+.hero-music-button {
+
+    transform: scale(1.06);
+
+    background: white;
+
+}
+
+
+/* =========================================================
+   MÒBIL
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero-music-cta {
+
+        bottom: 25%;
+
+        width: min(280px, 76%);
+
+        padding:
+            11px
+            14px
+            11px;
+
+        gap: 9px;
+
+        border-radius: 15px;
+
+    }
+
+
+    .hero-music-text {
+
+        font-size: .70rem;
+
+    }
+
+
+    .hero-music-button {
+
+        width: 46px;
+
+        height: 46px;
+
+        font-size: 1rem;
+
+        margin-bottom: -31px;
+
+        border-width: 4px;
+
+    }
+
+}
+
 
 /* =========================================================
    EL GRUP
@@ -799,198 +1000,7 @@ h3 {
     margin: 0 0 20px 40px;
 }
 
-/* =========================================================
-   BOTÓ MÚSICA — HERO
-========================================================= */
 
-.hero-section {
-
-    position: relative;
-
-}
-
-
-/* =========================================================
-   REQUADRE
-========================================================= */
-
-.hero-music-cta {
-
-    position: absolute;
-
-    left: 50%;
-
-    top: 75%;
-
-    transform:
-        translate(-50%, -50%);
-
-    z-index: 10;
-
-    width: min(
-        330px,
-        80%
-    );
-
-    padding: 15px 18px 13px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 9px;
-
-    background:
-        var(--granat);
-
-    color:
-        var(--crema);
-
-    border-radius: 18px;
-
-    text-decoration: none;
-
-    box-shadow:
-        0 8px 25px rgba(0,0,0,.22);
-
-    transition:
-        transform .25s ease,
-        background .25s ease;
-
-}
-
-
-/* =========================================================
-   TEXT
-========================================================= */
-
-.hero-music-text {
-
-    font-family:
-        'Inter',
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    font-size: .9rem;
-
-    font-weight: 600;
-
-    letter-spacing: .01em;
-
-    text-align: center;
-
-}
-
-
-/* =========================================================
-   BOTÓ AURICULARS
-========================================================= */
-
-.hero-music-button {
-
-    width: 48px;
-
-    height: 48px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background:
-        var(--crema);
-
-    color:
-        var(--granat);
-
-    font-size: 1.15rem;
-
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        color .25s ease;
-
-}
-
-
-/* =========================================================
-   HOVER
-========================================================= */
-
-.hero-music-cta:hover {
-
-    transform:
-        translate(-50%, -50%)
-        translateY(-4px);
-
-    background:
-        var(--granat-fosc);
-
-}
-
-
-.hero-music-cta:hover
-.hero-music-button {
-
-    transform:
-        scale(1.08);
-
-    background:
-        white;
-
-}
-
-
-/* =========================================================
-   MÒBIL
-========================================================= */
-
-@media (max-width: 600px) {
-
-    .hero-music-cta {
-
-        top: 75%;
-
-        width: min(
-            280px,
-            75%
-        );
-
-        padding: 12px 14px 11px;
-
-        gap: 7px;
-
-        border-radius: 15px;
-
-    }
-
-
-    .hero-music-text {
-
-        font-size: .76rem;
-
-    }
-
-
-    .hero-music-button {
-
-        width: 42px;
-
-        height: 42px;
-
-        font-size: 1rem;
-
-    }
-
-}
 
 /* =========================================================
    CONCERTS 2025
