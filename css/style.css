@@ -1617,11 +1617,14 @@ h3 {
 
     align-items: center;
 
-    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    flex-wrap: nowrap;
 
     gap: 9px;
 
     margin-top: 15px;
+
 
 }
 
@@ -1808,6 +1811,8 @@ h3 {
     .album-actions {
 
         margin-top: 11px;
+           flex-wrap: wrap;
+
 
     }
 
