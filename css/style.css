@@ -1118,9 +1118,8 @@ h3 {
 
     padding: 42px 0 48px;
 
-    /* Mateix fons que els Videolyrics */
-
-    background: rgba(255, 255, 255, .42);
+    background:
+        rgba(255, 255, 255, .42);
 
 }
 
@@ -1141,8 +1140,8 @@ h3 {
     display: grid;
 
     grid-template-columns:
-        1fr
-        1fr;
+        1.15fr
+        .85fr;
 
     align-items: center;
 
@@ -1171,7 +1170,7 @@ h3 {
 
 .intro-text h1 {
 
-    margin: 0 0 18px;
+    margin: 0 0 20px;
 
     color: var(--granat);
 
@@ -1190,7 +1189,7 @@ h3 {
 
 .intro-text p:not(.section-label) {
 
-    margin: 0 0 12px;
+    margin: 0 0 13px;
 
     color: #292929;
 
@@ -1203,6 +1202,29 @@ h3 {
     font-size: .88rem;
 
     line-height: 1.55;
+
+}
+
+
+.intro-text strong {
+
+    color: var(--granat);
+
+}
+
+
+.intro-text em {
+
+    font-style: italic;
+
+}
+
+
+.intro-final {
+
+    margin-top: 18px !important;
+
+    font-size: .95rem !important;
 
 }
 
@@ -1226,13 +1248,16 @@ h3 {
 
     display: block;
 
-    width: 75%;
+    width: 70%;
 
     height: auto;
 
     border-radius: 14px;
 
     object-fit: cover;
+
+    transform:
+        rotate(-4deg);
 
 }
 
@@ -1259,7 +1284,7 @@ h3 {
 
         grid-template-columns: 1fr;
 
-        gap: 28px;
+        gap: 30px;
 
     }
 
@@ -1273,7 +1298,7 @@ h3 {
 
     .intro-photo img {
 
-        width: 75%;
+        width: 70%;
 
     }
 
@@ -1290,6 +1315,13 @@ h3 {
         font-size: .82rem;
 
         line-height: 1.5;
+
+    }
+
+
+    .intro-final {
+
+        font-size: .88rem !important;
 
     }
 
