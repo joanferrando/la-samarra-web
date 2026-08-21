@@ -1137,16 +1137,6 @@ h3 {
 
     margin: 0 auto;
 
-    display: grid;
-
-    grid-template-columns:
-        1.15fr
-        .85fr;
-
-    align-items: center;
-
-    gap: 55px;
-
 }
 
 
@@ -1156,7 +1146,7 @@ h3 {
 
 .intro-text {
 
-    min-width: 0;
+    display: block;
 
 }
 
@@ -1230,16 +1220,20 @@ h3 {
 
 
 /* =========================================================
-   FOTOGRAFIA
+   FOTOGRAFIA — INTEGRADA AL TEXT
 ========================================================= */
 
 .intro-photo {
 
-    display: flex;
+    float: right;
 
-    align-items: center;
+    width: 31%;
 
-    justify-content: center;
+    margin:
+        4px
+        0
+        22px
+        38px;
 
 }
 
@@ -1252,12 +1246,29 @@ h3 {
 
     height: auto;
 
+    margin: 0 auto;
+
     border-radius: 14px;
 
     object-fit: cover;
 
     transform:
         rotate(-4deg);
+
+}
+
+
+/* =========================================================
+   NETEJA DEL FLOAT
+========================================================= */
+
+.intro-container::after {
+
+    content: "";
+
+    display: table;
+
+    clear: both;
 
 }
 
@@ -1282,16 +1293,24 @@ h3 {
 
         width: 90%;
 
-        grid-template-columns: 1fr;
-
-        gap: 30px;
-
     }
 
 
     .intro-photo {
 
-        order: -1;
+        float: none;
+
+        width: 100%;
+
+        margin:
+            0
+            0
+            28px
+            0;
+
+        display: flex;
+
+        justify-content: center;
 
     }
 
@@ -1299,6 +1318,8 @@ h3 {
     .intro-photo img {
 
         width: 70%;
+
+        margin: 0 auto;
 
     }
 
