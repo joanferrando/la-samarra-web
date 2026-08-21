@@ -1220,19 +1220,19 @@ h3 {
 
 
 /* =========================================================
-   FOTOGRAFIA — INTEGRADA AL TEXT
+   FOTOGRAFIA INTEGRADA AL TEXT
 ========================================================= */
 
 .intro-photo {
 
     float: right;
 
-    width: 31%;
+    width: 28%;
 
     margin:
-        4px
         0
-        22px
+        0
+        20px
         38px;
 
 }
@@ -1242,11 +1242,11 @@ h3 {
 
     display: block;
 
-    width: 70%;
+    width: 100%;
 
     height: auto;
 
-    margin: 0 auto;
+    margin: 0;
 
     border-radius: 14px;
 
