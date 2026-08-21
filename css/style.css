@@ -1124,10 +1124,6 @@ h3 {
 }
 
 
-/* =========================================================
-   CONTENIDOR
-========================================================= */
-
 .intro-container {
 
     width: min(
@@ -1136,6 +1132,43 @@ h3 {
     );
 
     margin: 0 auto;
+
+}
+
+
+/* =========================================================
+   FOTOGRAFIA INTEGRADA AL TEXT
+========================================================= */
+
+.intro-photo {
+
+    float: right;
+
+    width: 30%;
+
+    margin:
+        0
+        0
+        20px
+        40px;
+
+}
+
+
+.intro-photo img {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    border-radius: 14px;
+
+    object-fit: cover;
+
+    transform:
+        rotate(-4deg);
 
 }
 
@@ -1220,46 +1253,7 @@ h3 {
 
 
 /* =========================================================
-   FOTOGRAFIA INTEGRADA AL TEXT
-========================================================= */
-
-.intro-photo {
-
-    float: right;
-
-    width: 28%;
-
-    margin:
-        0
-        0
-        20px
-        38px;
-
-}
-
-
-.intro-photo img {
-
-    display: block;
-
-    width: 100%;
-
-    height: auto;
-
-    margin: 0;
-
-    border-radius: 14px;
-
-    object-fit: cover;
-
-    transform:
-        rotate(-4deg);
-
-}
-
-
-/* =========================================================
-   NETEJA DEL FLOAT
+   NETEJA
 ========================================================= */
 
 .intro-container::after {
@@ -1282,9 +1276,6 @@ h3 {
     .intro-section {
 
         padding: 34px 0 38px;
-
-        background:
-            rgba(255, 255, 255, .42);
 
     }
 
