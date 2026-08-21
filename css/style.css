@@ -706,9 +706,11 @@ h3 {
 
     z-index: 20;
 
-    width: min(330px, 78%);
+    width: max-content;
 
-    padding: 13px 18px 13px;
+    min-width: 0;
+
+    padding: 11px 15px 13px;
 
     display: flex;
 
@@ -718,7 +720,7 @@ h3 {
 
     justify-content: center;
 
-    gap: 11px;
+    gap: 9px;
 
     background: var(--granat);
 
@@ -747,22 +749,22 @@ h3 {
     color: var(--crema);
 
     font-family:
-        'Inter',
-        Helvetica,
-        Arial,
+        'Bebas Neue',
         sans-serif;
 
-    font-size: .82rem;
+    font-size: 1.05rem;
 
-    font-weight: 700;
+    font-weight: 400;
 
-    letter-spacing: .02em;
+    letter-spacing: .03em;
 
-    line-height: 1.15;
+    line-height: 1;
 
     text-align: center;
 
     text-transform: uppercase;
+
+    white-space: nowrap;
 
 }
 
@@ -791,11 +793,12 @@ h3 {
 
     font-size: 1.15rem;
 
-    /* El cercle surt del requadre */
+    /*
+       El cercle queda aproximadament
+       75% cobert pel requadre
+    */
 
     margin-bottom: -34px;
-
-    /* Traç granat al voltant */
 
     border: 4px solid var(--granat);
 
@@ -845,14 +848,12 @@ h3 {
 
         bottom: 25%;
 
-        width: min(280px, 76%);
-
         padding:
-            11px
-            14px
-            11px;
+            10px
+            12px
+            12px;
 
-        gap: 9px;
+        gap: 8px;
 
         border-radius: 15px;
 
@@ -861,7 +862,7 @@ h3 {
 
     .hero-music-text {
 
-        font-size: .70rem;
+        font-size: .85rem;
 
     }
 
