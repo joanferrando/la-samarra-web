@@ -686,7 +686,9 @@ h3 {
 ========================================================= */
 
 .hero-section {
+
     position: relative;
+
 }
 
 
@@ -700,9 +702,10 @@ h3 {
 
     left: 50%;
 
-    bottom: 25%;
+    bottom: 21%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     z-index: 20;
 
@@ -710,7 +713,10 @@ h3 {
 
     min-width: 0;
 
-    padding: 11px 15px 13px;
+    padding:
+        11px
+        15px
+        5px;
 
     display: flex;
 
@@ -722,9 +728,11 @@ h3 {
 
     gap: 9px;
 
-    background: var(--granat);
+    background:
+        var(--granat);
 
-    color: var(--crema);
+    color:
+        var(--crema);
 
     border-radius: 18px;
 
@@ -746,7 +754,8 @@ h3 {
 
 .hero-music-text {
 
-    color: var(--crema);
+    color:
+        var(--crema);
 
     font-family:
         'Bebas Neue',
@@ -787,23 +796,29 @@ h3 {
 
     border-radius: 50%;
 
-    background: var(--crema);
+    background:
+        var(--crema);
 
-    color: var(--granat);
+    color:
+        var(--granat);
 
     font-size: 1.15rem;
 
     /*
-       El cercle queda aproximadament
-       75% cobert pel requadre
+       El requadre granat queda darrere
+       de gairebé tot el cercle.
+       52px x 80% ≈ 42px
     */
 
-    margin-bottom: -34px;
+    margin-bottom: -10px;
 
-    border: 4px solid var(--granat);
+    border:
+        4px solid
+        var(--granat);
 
     box-shadow:
-        0 0 0 3px var(--granat);
+        0 0 0 3px
+        var(--granat);
 
     transition:
         transform .25s ease,
@@ -831,9 +846,11 @@ h3 {
 .hero-music-cta:hover
 .hero-music-button {
 
-    transform: scale(1.06);
+    transform:
+        scale(1.06);
 
-    background: white;
+    background:
+        white;
 
 }
 
@@ -846,12 +863,12 @@ h3 {
 
     .hero-music-cta {
 
-        bottom: 25%;
+        bottom: 21%;
 
         padding:
             10px
             12px
-            12px;
+            4px;
 
         gap: 8px;
 
@@ -875,7 +892,7 @@ h3 {
 
         font-size: 1rem;
 
-        margin-bottom: -31px;
+        margin-bottom: -9px;
 
         border-width: 4px;
 
