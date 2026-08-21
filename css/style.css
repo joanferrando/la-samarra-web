@@ -427,434 +427,6 @@ h3 {
 }
 
 /* =========================================================
-   LA SAMARRA
-   ESTIL GENERAL
-========================================================= */
-
-:root {
-    --granat: #74151b;
-    --granat-fosc: #4d0e13;
-    --granat-clar: #8b242b;
-   --taronja: #c87545;
-
-    --paper: #e8e3d5;
-    --paper-clar: #f3efe5;
-    --crema: #f5f0e4;
-
-    --negre: #211e1c;
-
-    --amplada: 1200px;
-
-    --ombra:
-        0 8px 25px rgba(0, 0, 0, .12);
-}
-
-
-/* =========================================================
-   RESET
-========================================================= */
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background:
-        url("../img/FONS.jpg") center top / 700px auto repeat;
-
-    color: var(--negre);
-
-    font-family:
-        'Cormorant Garamond',
-        Georgia,
-        serif;
-
-    line-height: 1.5;
-}
-
-img {
-    max-width: 100%;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-
-/* =========================================================
-   TIPOGRAFIA
-========================================================= */
-
-h1,
-h2,
-h3 {
-    font-family:
-        'Bebas Neue',
-        sans-serif;
-
-    font-weight: 400;
-}
-
-.section-label {
-    color: var(--granat);
-
-    font-family:
-        'Inter',
-        sans-serif;
-
-    font-size: .72rem;
-    font-weight: 700;
-
-    letter-spacing: .16em;
-
-    text-transform: uppercase;
-
-    margin-bottom: 8px;
-}
-
-
-/* =========================================================
-   CONTENIDOR GENERAL
-========================================================= */
-
-.section-container {
-    width: min(var(--amplada), 90%);
-    margin: 0 auto;
-}
-
-
-/* =========================================================
-   MENÚ
-========================================================= */
-
-.site-header {
-
-    position: fixed;
-
-    top: 20px;
-    left: 0;
-    right: 0;
-
-    z-index: 1000;
-
-}
-
-
-.header-container {
-
-    width: min(
-        1200px,
-        calc(100% - 48px)
-    );
-
-    height: 78px;
-
-    margin: auto;
-
-    padding: 3px 22px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 22px;
-
-    background:
-        var(--granat);
-
-    border-radius: 50px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.18);
-
-}
-
-
-/* =========================================================
-   LOGO
-========================================================= */
-
-.logo {
-
-    display: flex;
-
-    align-items: center;
-
-    flex-shrink: 0;
-
-    /*
-       El PNG té molt espai transparent.
-       Per això fem el contenidor més ample
-       i permetem que la imatge sobresurti.
-    */
-
-    width: 165px;
-
-    height: 100%;
-
-    margin-left: -8px;
-
-}
-
-
-.logo img {
-
-    display: block;
-
-    width: 165px;
-
-    height: auto;
-
-    max-width: none;
-
-    object-fit: contain;
-
-    /*
-       Convertim el logo a blanc.
-       Funciona especialment bé si el PNG
-       és negre sobre fons transparent.
-    */
-
-    filter:
-        brightness(0)
-        invert(1);
-
-    transform:
-        rotate(-4deg);
-
-    transform-origin:
-        center;
-
-    transition:
-        transform .3s ease;
-
-}
-
-
-.logo:hover img {
-
-    transform:
-        rotate(-4deg)
-        translateY(-2px);
-
-}
-
-
-/* =========================================================
-   NAVEGACIÓ
-========================================================= */
-
-.main-nav {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 30px;
-
-    flex: 1;
-
-}
-
-
-.main-nav a {
-
-    position: relative;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 7px;
-
-    padding-bottom: 6px;
-
-    color:
-        var(--crema);
-
-    font-family:
-        'Inter',
-        Helvetica,
-        Arial,
-        sans-serif;
-
-    /*
-       Abans .78rem
-       Ara aproximadament +15%
-    */
-
-    font-size: .9rem;
-
-    font-weight: 500;
-
-    text-transform: uppercase;
-
-    letter-spacing: .015em;
-
-    white-space: nowrap;
-
-    transition:
-        color .25s ease;
-
-}
-
-
-/* LÍNIA DEL MENÚ */
-
-.main-nav a::after {
-
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 0;
-
-    height: 1.5px;
-
-    background:
-        var(--crema);
-
-    transition:
-        width .3s ease;
-
-}
-
-
-.main-nav a:hover::after {
-
-    width: 100%;
-
-}
-
-
-.main-nav a:hover {
-
-    color: white;
-
-}
-
-
-/* CASETA */
-
-.main-nav .home-link {
-
-    gap: 7px;
-
-}
-
-
-.main-nav .home-link i {
-
-    font-size: .82rem;
-
-}
-
-
-/* =========================================================
-   XARXES
-========================================================= */
-
-.socials {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    flex-shrink: 0;
-
-}
-
-
-.socials a {
-
-    width: 40px;
-
-    height: 40px;
-
-    border-radius: 50%;
-
-    background:
-        var(--crema);
-
-    color:
-        var(--granat);
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    font-size: 1rem;
-
-    transition:
-        transform .25s ease,
-        background .25s ease,
-        color .25s ease;
-
-}
-
-
-.socials a:hover {
-
-    transform:
-        translateY(-2px);
-
-    background: white;
-
-    color:
-        var(--granat-fosc);
-
-}
-
-
-/* =========================================================
-   BOTÓ MÒBIL
-========================================================= */
-
-.menu-toggle {
-
-    display: none;
-
-    width: 42px;
-
-    height: 42px;
-
-    padding: 0;
-
-    border: none;
-
-    background: transparent;
-
-    color:
-        var(--crema);
-
-    font-size: 1.55rem;
-
-    cursor: pointer;
-
-    align-items: center;
-
-    justify-content: center;
-
-}
-
-/* =========================================================
    MENÚ MÒBIL — RESPONSIVE
 ========================================================= */
 
@@ -1108,6 +680,117 @@ h3 {
 
     object-fit: cover;
 }
+
+
+/* =========================================================
+   EL GRUP
+========================================================= */
+
+.intro-section {
+    padding: 42px 0 48px;
+    background: rgba(255, 255, 255, .42);
+}
+
+.intro-container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+}
+
+.intro-photo {
+    float: right;
+    width: 30%;
+    margin: 0 0 20px 40px;
+}
+
+.intro-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    object-fit: cover;
+    transform: rotate(-4deg);
+}
+
+.intro-text {
+    display: block;
+}
+
+.intro-text .section-label {
+    margin-bottom: 3px;
+}
+
+.intro-text h1 {
+    margin: 0 0 20px;
+    color: var(--granat);
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: .9;
+}
+
+.intro-text p:not(.section-label) {
+    margin: 0 0 13px;
+    color: #292929;
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: .88rem;
+    line-height: 1.55;
+}
+
+.intro-text strong {
+    color: var(--granat);
+}
+
+.intro-text em {
+    font-style: italic;
+}
+
+.intro-final {
+    margin-top: 18px !important;
+    font-size: .95rem !important;
+}
+
+.intro-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media (max-width: 700px) {
+    .intro-section {
+        padding: 34px 0 38px;
+    }
+
+    .intro-container {
+        width: 90%;
+    }
+
+    .intro-photo {
+        float: none;
+        width: 100%;
+        margin: 0 0 28px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro-photo img {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .intro-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .intro-text p:not(.section-label) {
+        font-size: .82rem;
+        line-height: 1.5;
+    }
+
+    .intro-final {
+        font-size: .88rem !important;
+    }
+}
+
 
 
 .intro-photo {
