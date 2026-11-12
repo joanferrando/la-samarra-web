@@ -4145,3 +4145,11 @@ h3 {
     }
 
 }
+
+
+/* HERO — ajust per a mòbil */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 65px;
+    }
+}
