@@ -710,7 +710,7 @@ h3 {
         15px
         8px;
 
-    display: flex;
+    display: none;
 
     flex-direction: column;
 
