@@ -667,18 +667,15 @@ h3 {
 ========================================================= */
 
 .hero-section {
-    padding-top: 105px;
+    padding-top: 0;
 }
 
 .hero-image {
     display: block;
-
     width: 100%;
-
-    height: calc(100vh - 105px);
-    min-height: 580px;
-
-    object-fit: cover;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
 }
 
 /* =========================================================
