@@ -879,6 +879,95 @@ h3 {
 }
 
 /* =========================================================
+   INSTAGRAM
+========================================================= */
+
+.instagram-section {
+    padding: 42px 0 46px;
+    background: var(--granat);
+    color: var(--crema);
+}
+
+.instagram-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.instagram-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.instagram-kicker {
+    margin: 0 0 3px;
+    color: rgba(255,255,255,.72);
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+}
+
+.instagram-header h2 {
+    margin: 0;
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: .95;
+}
+
+.instagram-follow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+    color: var(--crema);
+    font-family: 'Inter', Helvetica, Arial, sans-serif;
+    font-size: .82rem;
+    font-weight: 600;
+    transition: opacity .2s ease;
+}
+
+.instagram-follow:hover {
+    opacity: .72;
+}
+
+.instagram-follow i {
+    font-size: 1rem;
+}
+
+.instagram-feed {
+    width: 100%;
+    min-height: 120px;
+}
+
+.instagram-feed behold-widget {
+    display: block;
+    width: 100%;
+}
+
+/* MÒBIL */
+
+@media (max-width: 700px) {
+    .instagram-section {
+        padding: 34px 0 38px;
+    }
+
+    .instagram-header {
+        margin-bottom: 18px;
+    }
+
+    .instagram-header h2 {
+        font-size: 2.25rem;
+    }
+
+    .instagram-feed {
+        min-height: 100px;
+    }
+}
+
+
+/* =========================================================
    EL GRUP
 ========================================================= */
 
