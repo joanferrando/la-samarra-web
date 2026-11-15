@@ -1,121 +1,131 @@
 <!DOCTYPE html>
+
+
 <html lang="ca">
+
 
 <head>
 
-    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
 
-    <title>La Samarra</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link
+<title>La Samarra</title>
+
+<link
         rel="icon"
         type="image/png"
         href="img/favicon.png">
 
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Google Fonts -->
+<link rel="stylesheet" href="css/style.css">
+<!-- Google Fonts -->
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 
 <link
     href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
     rel="stylesheet">
 
+
 <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+
 
 <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-    <!-- Font Awesome -->
 
-    
+<!-- Font Awesome -->
 
 <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 
 </head>
 
 
 <body>
 
-    <div class="snow-layer" aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-            <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+
+<div class="snow-layer" aria-hidden="true">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
 
 </div>
+
 
 <!-- ==========================================
      REPRODUCTOR
 ========================================== -->
 
+
 <div class="music-player">
 
-    <audio id="background-music" preload="metadata">
-        <source src="audio/nadala.mp3" type="audio/mpeg">
-    </audio>
 
+<audio id="background-music" preload="metadata">
+<source src="audio/nadala.mp3" type="audio/mpeg">
+</audio>
 
-    <button
+<button
         id="play-button"
         class="player-button player-play"
         type="button"
         aria-label="Reproduir música">
 
-        <i class="fa-solid fa-play"></i>
+<i class="fa-solid fa-play"></i>
 
-    </button>
+</button>
 
-
-    <button
+<button
         id="mute-button"
         class="player-button player-mute"
         type="button"
         aria-label="Silenciar música">
 
-        <i class="fa-solid fa-volume-high"></i>
+<i class="fa-solid fa-volume-high"></i>
 
-    </button>
+</button>
 
 </div>    
 
-    <!-- ==========================================
+
+<!-- ==========================================
      BOTÓ CONTACTE
 ========================================== -->
 
@@ -126,188 +136,594 @@
     class="floating-mail"
     aria-label="Escriu-nos a info@samarra.cat">
 
-    <i class="fa-solid fa-envelope"></i>
+<i class="fa-solid fa-envelope"></i>
 
 </a>
+
 
 <!-- ==========================================
      MENÚ
 ========================================== -->
 
+
 <header class="site-header">
 
-    <div class="header-container">
 
+<div class="header-container">
 
-        <!-- LOGO -->
+<!-- LOGO -->
 
-        <a href="#inici" class="logo">
+<a href="#inici" class="logo">
 
-            <img
+<img
                 src="img/logo.png"
                 alt="La Samarra">
 
-        </a>
+</a>
 
+<!-- NAVEGACIÓ -->
 
+<nav class="main-nav">
 
-        <!-- NAVEGACIÓ -->
-
-        <nav class="main-nav">
-
-            <a
+<a
                 href="#inici"
                 class="home-link">
 
-                <i class="fa-solid fa-house"></i>
+<i class="fa-solid fa-house"></i>
 
-                <span>
-                    Inici
-                </span>
+<span>
+Inici
+</span>
 
-            </a>
+</a>
 
+<a href="#grup">
+El grup
+</a>
 
-            <a href="#grup">
-                El grup
-            </a>
+<a href="#concerts">
+Concerts
+</a>
 
+<a href="#musica">
+La nostra música
+</a>
 
-            <a href="#concerts">
-                Concerts
-            </a>
+<a href="#contacte">
+Contacte
+</a>
 
+<a href="#dossier">
+Dossier
+</a>
 
-            <a href="#musica">
-                La nostra música
-            </a>
+</nav>
 
+<!-- XARXES SOCIALS -->
 
-            <a href="#contacte">
-                Contacte
-            </a>
+<div class="socials">
 
+<!-- INSTAGRAM -->
 
-            <a href="#dossier">
-                Dossier
-            </a>
-
-        </nav>
-
-
-
-        <!-- XARXES SOCIALS -->
-
-        <div class="socials">
-
-
-            <!-- INSTAGRAM -->
-
-            <a
+<a
                 href="https://www.instagram.com/lasamarra_nadales/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram">
 
-                <i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-instagram"></i>
 
-            </a>
+</a>
 
+<!-- YOUTUBE -->
 
-
-            <!-- YOUTUBE -->
-
-            <a
+<a
                 href="https://www.youtube.com/@lasamarra2025"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube">
 
-                <i class="fa-brands fa-youtube"></i>
+<i class="fa-brands fa-youtube"></i>
 
-            </a>
+</a>
 
+<!-- BANDCAMP -->
 
-
-            <!-- BANDCAMP -->
-
-            <a
+<a
                 href="https://lasamarra.bandcamp.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Bandcamp">
 
-                <span class="bandcamp-logo"></span>
+<span class="bandcamp-logo"></span>
 
-            </a>
+</a>
 
+<!-- SPOTIFY -->
 
-
-            <!-- SPOTIFY -->
-
-            <a
+<a
                 href="https://open.spotify.com/artist/7x6RvVricOxsljUvwFiEpC"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Spotify">
 
-                <i class="fa-brands fa-spotify"></i>
+<i class="fa-brands fa-spotify"></i>
 
-            </a>
+</a>
 
+</div>
 
-        </div>
+<!-- BOTÓ MENÚ MÒBIL -->
 
-
-
-        <!-- BOTÓ MENÚ MÒBIL -->
-
-        <button
+<button
             class="menu-toggle"
             type="button"
             aria-label="Obrir menú"
             aria-expanded="false">
 
-            <i class="fa-solid fa-bars"></i>
+<i class="fa-solid fa-bars"></i>
 
-        </button>
+</button>
 
-
-    </div>
+</div>
 
 </header>
 
-    <main>
+
+<main>
+
+<section id="inici" class="hero-section">
 
 
-        <!-- ==========================================
-             HERO
-        =========================================== -->
-
-        <section id="inici" class="hero-section">
-
-            <img
+<img
                 src="img/Hero.jpg"
                 alt="La Samarra"
                 class="hero-image">
 
-            <!-- =========================================================
+<!-- =========================================================
      BOTÓ MÚSICA — HERO
 ========================================================= -->
 
 <a href="#musica" class="hero-music-cta">
 
-    <span class="hero-music-text">
-        Ja pots escoltar els Volums I i II
-    </span>
 
-    <span class="hero-music-button">
-        <i class="fa-solid fa-headphones"></i>
-    </span>
+<span class="hero-music-text">
+Ja pots escoltar els Volums I i II
+</span>
+
+<span class="hero-music-button">
+<i class="fa-solid fa-headphones"></i>
+</span>
 
 </a>
 
-        </section>
+
+</section>
+
+<!-- =========================================================
+     EL GRUP
+========================================================= -->
+
+
+<section id="concerts" class="concerts-section">
+
+
+<div class="concerts-container">
+
+<div class="concerts-header">
+
+<p class="concerts-kicker">
+LA SAMARRA
+</p>
+
+<h2>
+CONCERTS 2026
+</h2>
+
+</div>
+
+<div class="concerts-list">
+
+<!-- 6 DE DESEMBRE -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">6</span>
+<span class="concert-month">DES</span>
+</div>
+
+<div class="concert-place">
+Cambrils
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 12 DE DESEMBRE -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">12</span>
+<span class="concert-month">DES</span>
+</div>
+
+<div class="concert-place">
+Maspujols
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 13 DE DESEMBRE -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">13</span>
+<span class="concert-month">DES</span>
+</div>
+
+<div class="concert-place">
+Ullastrell
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 19 DE DESEMBRE — REUS -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">19</span>
+<span class="concert-month">DES</span>
+</div>
+
+<div class="concert-place">
+Reus
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 19 DE DESEMBRE — L'ALEIXAR -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">19</span>
+<span class="concert-month">DES</span>
+</div>
+
+<div class="concert-place">
+L'Aleixar
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 20 DE DESEMBRE -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">20</span>
+<span class="concert-month">DES</span>
+</div>
+
+<div class="concert-place">
+Riudecanyes
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 27 DE DESEMBRE -->
+
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">27</span>
+<span class="concert-month">DES</span>
+</div>
+
+<div class="concert-place">
+Sant Genís
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 2 DE GENER -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">2</span>
+<span class="concert-month">GEN</span>
+</div>
+
+<div class="concert-place">
+L'Argentera
+</div>
+
+<div class="concert-info">
+Aviat, més informació...
+</div>
+
+</article>
+
+<!-- 4 DE GENER -->
+
+<article class="concert-item">
+
+<div class="concert-date">
+<span class="concert-day">4</span>
+<span class="concert-month">GEN</span>
+
+
+**Part 2 de 3**
+
+```html
+                </div>
+
+                <div class="concert-place">
+                    La Selva del Camp
+                </div>
+
+                <div class="concert-info">
+                    Aviat, més informació...
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LA NOSTRA MÚSICA
+========================================================= -->
+
+
+<section id="musica" class="albums-section">
+
+    <div class="albums-container">
+
+        <div class="albums-header">
+
+            <p class="albums-kicker">
+                LA SAMARRA
+            </p>
+
+            <h2>
+                LA NOSTRA MÚSICA
+            </h2>
+
+        </div>
+
+
+        <div class="albums-list">
+
+
+            <!-- VOLUM I -->
+
+            <article class="album-item">
+
+                <div class="album-image">
+
+                    <img
+                        src="img/volum1.jpg"
+                        alt="Nadales Fermes Vol. I">
+
+                </div>
+
+                <div class="album-info">
+
+                    <h3>
+                        NADALADES FERMES VOL. I
+                    </h3>
+
+                    <p>
+                        Publicat el 2025
+                    </p>
+
+                    <a
+                        href="https://lasamarra.bandcamp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="album-link">
+
+                        ESCOLTA'L
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- VOLUM II -->
+
+            <article class="album-item">
+
+                <div class="album-image">
+
+                    <img
+                        src="img/volum2.jpg"
+                        alt="Nadales Fermes Vol. II">
+
+                </div>
+
+                <div class="album-info">
+
+                    <h3>
+                        NADALADES FERMES VOL. II
+                    </h3>
+
+                    <p>
+                        Publicat el 2026
+                    </p>
+
+                    <a
+                        href="https://lasamarra.bandcamp.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="album-link">
+
+                        ESCOLTA'L
+
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CANTA AMB NOSALTRES
+========================================================= -->
+
+
+<div class="videolyrics">
+
+    <div class="videolyrics-container">
+
+        <div class="videolyrics-header">
+
+            <p class="videolyrics-kicker">
+                LA SAMARRA
+            </p>
+
+            <h2>
+                CANTA AMB NOSALTRES
+            </h2>
+
+            <p>
+                Aprèn-te les lletres i canta-les als concerts!
+            </p>
+
+        </div>
+
+
+        <div class="videolyrics-grid">
+
+
+            <!-- CANÇÓ 1 -->
+
+            <div class="videolyrics-item">
+
+                <div class="videolyrics-video">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_1"
+                        title="Cançó 1"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+                <h3>
+                    CANÇÓ 1
+                </h3>
+
+            </div>
+
+
+            <!-- CANÇÓ 2 -->
+
+            <div class="videolyrics-item">
+
+                <div class="videolyrics-video">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_2"
+                        title="Cançó 2"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+                <h3>
+                    CANÇÓ 2
+                </h3>
+
+            </div>
+
+
+            <!-- CANÇÓ 3 -->
+
+            <div class="videolyrics-item">
+
+                <div class="videolyrics-video">
+
+                    <iframe
+                        src="https://www.youtube.com/embed/VIDEO_ID_3"
+                        title="Cançó 3"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+
+                </div>
+
+                <h3>
+                    CANÇÓ 3
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
 
 
 
@@ -315,59 +731,33 @@
      EL GRUP
 ========================================================= -->
 
+
 <section id="grup" class="intro-section">
 
     <div class="intro-container">
 
-        <!-- FOTOGRAFIA -->
+        <div class="intro-header">
 
-        <div class="intro-photo">
+            <p class="intro-kicker">
+                QUI SOM
+            </p>
 
-            <img
-                src="img/foto1.jpg"
-                alt="La Samarra">
+            <h2>
+                EL GRUP
+            </h2>
 
         </div>
 
 
-        <!-- TEXT -->
-
-        <div class="intro-text">
-
-            <p class="section-label">
-                EL GRUP
-            </p>
-
-            <h1>
-                LA SAMARRA
-            </h1>
-
+        <div class="intro-content">
 
             <p>
-                Quan arriben les festes, hi ha un fil que
-                ressegueix els carrers, s'escola entre les
-                fires i s'allarga fins a les sobretaules.
-                Un fil musical que, any rere any, ens retorna
-                a cançons que ja hi eren i que volem que perdurin.
-            </p>
-
-
-            <p>
-                <strong>La Samarra és un grup musical del Baix Camp</strong>
-                que recull l'esperit de les nadales de sempre
-                —les que tots coneixem, les que hem cantat alguna
-                vegada— i les fa caminar per estils que conviden
-                a <strong>ballar, cantar i xalar amb bona companyia.</strong>
-            </p>
-
-
-            <p>
-                En un concert de La Samarra,
-                <em>El 25 de desembre</em>,
-                <em>Les dotze van tocant</em> o
-                <em>La pastora Caterina</em> comparteixen escenari
-                amb cançons de Nadal més actuals que ja s'estan
-                convertint en clàssics de les nostres festes,
+                La Samarra és un grup de música festiva que revisita
+                les nadales populars i les transforma en cançons
+                per cantar, ballar i compartir. Ens agrada recuperar
+                melodies que formen part de la nostra memòria
+                col·lectiva i fer-les nostres, convertint-les en
+                clàssics de les nostres festes,
                 com <em>Quan somrius</em>,
                 <em>És un desig</em>,
                 <em>El caganer</em> d'Albert Pla o
@@ -429,666 +819,6 @@
      CONCERTS
 ========================================================= -->
 
-<section id="concerts" class="concerts-section">
-
-    <div class="concerts-container">
-
-        <div class="concerts-header">
-
-            <p class="concerts-kicker">
-                LA SAMARRA
-            </p>
-
-            <h2>
-                CONCERTS 2026
-            </h2>
-
-        </div>
-
-
-        <div class="concerts-list">
-
-
-            <!-- 6 DE DESEMBRE -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">6</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    Cambrils
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 12 DE DESEMBRE -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">12</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    Maspujols
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 13 DE DESEMBRE -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">13</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    Ullastrell
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 19 DE DESEMBRE — REUS -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">19</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    Reus
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 19 DE DESEMBRE — L'ALEIXAR -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">19</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    L'Aleixar
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 20 DE DESEMBRE -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">20</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    Riudecanyes
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 25 DE DESEMBRE -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">25</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    Riudoms
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 27 DE DESEMBRE -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">27</span>
-                    <span class="concert-month">DES</span>
-                </div>
-
-                <div class="concert-place">
-                    Sant Genís
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 2 DE GENER -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">2</span>
-                    <span class="concert-month">GEN</span>
-                </div>
-
-                <div class="concert-place">
-                    L'Argentera
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-            <!-- 4 DE GENER -->
-
-            <article class="concert-item">
-
-                <div class="concert-date">
-                    <span class="concert-day">4</span>
-                    <span class="concert-month">GEN</span>
-                </div>
-
-                <div class="concert-place">
-                    La Selva del Camp
-                </div>
-
-                <div class="concert-info">
-                    Aviat, més informació...
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================================================
-     ELS NOSTRES DISCOS
-========================================================= -->
-
-<section id="musica" class="albums-section">
-
-    <div class="albums-header">
-
-        <p class="albums-kicker">
-            LA NOSTRA MÚSICA
-        </p>
-
-        <h2>
-            ELS NOSTRES DISCOS
-        </h2>
-
-    </div>
-
-
-    <div class="albums-grid">
-
-
-        <!-- =================================================
-             EP 2 — 2026
-        ================================================== -->
-
-        <article class="album-card album-coming-soon">
-
-            <div class="album-cover">
-
-                <img
-                    src="img/portadaEP2.jpg"
-                    alt="Nadales Fermes Vol. II (2026)">
-
-                <div class="album-coming-overlay">
-
-                    <span>
-                        PROPERAMENT
-                    </span>
-
-                </div>
-
-            </div>
-
-
-            <div class="album-info">
-
-                <p class="album-year">
-                    2026
-                </p>
-
-                <h3>
-                    Nadales Fermes Vol. II
-                </h3>
-
-            </div>
-
-        </article>
-
-
-        <!-- =================================================
-             EP 1 — 2025
-        ================================================== -->
-
-        <article class="album-card">
-
-            <div class="album-cover">
-
-                <img
-                    src="img/portadaEP.jpg"
-                    alt="Nadales Fermes Vol. I (2025)">
-
-            </div>
-
-
-            <div class="album-info">
-
-                <p class="album-year">
-                    2025
-                </p>
-
-                <h3>
-                    Nadales Fermes Vol. I
-                </h3>
-
-
-                <div class="album-actions">
-
-
-                    <!-- SPOTIFY -->
-
-                    <a
-                        href="https://open.spotify.com/intl-pt/album/36qvSql6SLcs6jTvEjBVGm"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="album-action">
-
-                        <i class="fa-brands fa-spotify"></i>
-
-                        <span>
-                            Spotify
-                        </span>
-
-                    </a>
-
-
-                    <!-- BANDCAMP -->
-
-                    <a
-                        href="https://lasamarra.bandcamp.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="album-action">
-
-                        <span class="bandcamp-mini-logo"></span>
-
-                        <span>
-                            Bandcamp
-                        </span>
-
-                    </a>
-
-
-                    <!-- DESCÀRREGA -->
-
-                    <a
-                        href="https://drive.google.com/file/d/1qOYhmyFBpW7_hG7thw-uMsgpeyEWIOJ4/view?usp=drive_link"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="album-action album-download">
-
-                        <i class="fa-solid fa-download"></i>
-
-                        <span>
-                            Descarrega
-                        </span>
-
-                    </a>
-
-
-                </div>
-
-            </div>
-
-        </article>
-
-
-    </div>
-
-</section>
-
-    <!-- ==========================================
-     VIDEOLYRICS
-========================================== -->
-
-<div class="videolyrics">
-
-    <div class="videolyrics-header">
-
-        <div>
-
-            <p class="videolyrics-kicker">
-                VIDEOLYRICS
-            </p>
-
-            <h3>
-                CANTA AMB NOSALTRES!
-            </h3>
-
-        </div>
-
-
-        <!-- FLETXES -->
-
-        <div class="videolyrics-controls">
-
-            <button
-                type="button"
-                class="videolyrics-arrow videolyrics-prev"
-                aria-label="Vídeos anteriors">
-
-                <i class="fa-solid fa-arrow-left"></i>
-
-            </button>
-
-            <button
-                type="button"
-                class="videolyrics-arrow videolyrics-next"
-                aria-label="Vídeos següents">
-
-                <i class="fa-solid fa-arrow-right"></i>
-
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <!-- CARRUSEL -->
-
-    <div class="videolyrics-window">
-
-        <div class="videolyrics-track">
-
-
-            <!-- 1. EL DESEMBRE CONGELAT -->
-
-            <a
-                href="https://www.youtube.com/watch?v=x6hWC-h3KPM"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/x6hWC-h3KPM/hqdefault.jpg"
-                        alt="El desembre congelat">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    El desembre congelat
-                </h4>
-
-            </a>
-
-
-            <!-- 2. LES DOLCES FESTES -->
-
-            <a
-                href="https://www.youtube.com/watch?v=NxBKm4QEjpk"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/NxBKm4QEjpk/hqdefault.jpg"
-                        alt="Les dolces festes">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    Les dolces festes
-                </h4>
-
-            </a>
-
-
-            <!-- 3. L'ÀNGEL I ELS PASTORS -->
-
-            <a
-                href="https://www.youtube.com/watch?v=nd8tJ6VyUDI"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/nd8tJ6VyUDI/hqdefault.jpg"
-                        alt="L'àngel i els pastors">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    L'àngel i els pastors
-                </h4>
-
-            </a>
-
-
-            <!-- 4. EL TRINEU -->
-
-            <a
-                href="https://www.youtube.com/watch?v=_ddsMCFff0g"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/_ddsMCFff0g/hqdefault.jpg"
-                        alt="El trineu">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    El trineu
-                </h4>
-
-            </a>
-
-
-            <!-- 5. NAUFRAGI -->
-
-            <a
-                href="https://www.youtube.com/watch?v=tA8Ybx56aGQ"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/tA8Ybx56aGQ/hqdefault.jpg"
-                        alt="Naufragi">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    Naufragi
-                </h4>
-
-            </a>
-
-
-            <!-- 6. MENTRE DURI L'ESPERA -->
-
-            <a
-                href="https://www.youtube.com/watch?v=eu_HTHCjsQ0"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/eu_HTHCjsQ0/hqdefault.jpg"
-                        alt="Mentre duri l'espera">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    Mentre duri l'espera
-                </h4>
-
-            </a>
-
-
-            <!-- 7. FENT CAMÍ -->
-
-            <a
-                href="https://www.youtube.com/watch?v=OyKXrqvKlqk"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/OyKXrqvKlqk/hqdefault.jpg"
-                        alt="Fent camí">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    Fent camí
-                </h4>
-
-            </a>
-
-
-            <!-- 8. TOC DE FESTA -->
-
-            <a
-                href="https://www.youtube.com/watch?v=CJL69swYkb4"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="videolyrics-card">
-
-                <div class="videolyrics-thumbnail">
-
-                    <img
-                        src="https://img.youtube.com/vi/CJL69swYkb4/hqdefault.jpg"
-                        alt="Toc de festa">
-
-                    <span class="videolyrics-play">
-                        <i class="fa-solid fa-play"></i>
-                    </span>
-
-                </div>
-
-                <h4>
-                    Toc de festa
-                </h4>
-
-            </a>
-
-
-        </div>
-
-    </div>
-
-</div>
-
-
-
-      <!-- ==========================================
-     CONTACTE
-========================================== -->
 
 <section id="contacte" class="contact-section">
 
@@ -1263,10 +993,10 @@
 
 </section>
 
-
 <!-- ==========================================
      DOSSIER TÈCNIC
 ========================================== -->
+
 
 <section id="dossier" class="technical-dossier">
 
@@ -1338,7 +1068,8 @@
 
 </section>
 
-    </main>
+
+</main>
 
 
 <!-- ==========================================
@@ -1471,4 +1202,4 @@
 
 </body>
 
-</html>
+</html>    
