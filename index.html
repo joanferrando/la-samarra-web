@@ -167,26 +167,25 @@
 
             </a>
 
-
-            <a href="#grup">
-                El grup
-            </a>
-
-
             <a href="#concerts">
                 Concerts
             </a>
-
 
             <a href="#musica">
                 La nostra música
             </a>
 
-
-            <a href="#contacte">
-                Contacte
+            <a href="#canta">
+                Canta amb nosaltres
             </a>
 
+            <a href="#grup">
+                El grup
+            </a>
+
+            <a href="#contacte">
+                Contacta'ns
+            </a>
 
             <a href="#dossier">
                 Dossier
@@ -678,7 +677,7 @@
      VIDEOLYRICS
 ========================================== -->
 
-<div class="videolyrics">
+<div id="canta" class="videolyrics">
 
     <div class="videolyrics-header">
 
@@ -956,6 +955,71 @@
 <!-- =========================================================
      EL GRUP
 ========================================================= -->
+
+<!-- =========================================================
+     INSTAGRAM
+========================================================= -->
+
+<section id="instagram" class="instagram-section">
+
+    <div class="instagram-container">
+
+        <div class="instagram-header">
+
+            <p class="instagram-kicker">
+                LA SAMARRA
+            </p>
+
+            <h2>
+                SEGUEIX-NOS A LES XARXES
+            </h2>
+
+            <a
+                href="https://www.instagram.com/lasamarra_nadales/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="instagram-follow">
+
+                <i class="fa-brands fa-instagram"></i>
+                @lasamarra_nadales
+
+            </a>
+
+        </div>
+
+        <div class="instagram-feed">
+
+            <!--
+                INSTAGRAM FEED — BEHOLD
+
+                Quan hagis creat el feed a Behold, substitueix
+                SUBSTITUEIX_AQUEST_ID pel teu Feed ID.
+
+                Configuració recomanada a Behold:
+                - Flexible grid
+                - 5 publicacions
+                - 5 columnes (una sola filera)
+                - Imatges quadrades
+            -->
+
+            <behold-widget feed-id="SUBSTITUEIX_AQUEST_ID"></behold-widget>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+    (() => {
+        const d = document;
+        const s = d.createElement("script");
+        s.type = "module";
+        s.src = "https://w.behold.so/widget.js";
+        d.head.append(s);
+    })();
+</script>
+
 
 <section id="grup" class="intro-section">
 
@@ -1363,10 +1427,6 @@
                 Inici
             </a>
 
-            <a href="#grup">
-                El grup
-            </a>
-
             <a href="#concerts">
                 Concerts
             </a>
@@ -1375,8 +1435,16 @@
                 La nostra música
             </a>
 
+            <a href="#canta">
+                Canta amb nosaltres
+            </a>
+
+            <a href="#grup">
+                El grup
+            </a>
+
             <a href="#contacte">
-                Contacte
+                Contacta'ns
             </a>
 
             <a href="#dossier">
